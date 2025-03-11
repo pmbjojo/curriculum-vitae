@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { ChevronDown, File, Mail } from "lucide-react";
+import { ChevronDown, FileText, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { data } from "@/schemas";
@@ -65,12 +65,12 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
               <Button asChild>
                 <Link href={`mailto:${data.email}`} className="group">
                   <Mail className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
-                  <span className="relative">Contact Me</span>
+                  <span className="relative">Contactez Moi</span>
                 </Link>
               </Button>
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="hidden md:flex">
                 <Link href="/pdf" className="group">
-                  <File className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
+                  <FileText className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
                   <span className="relative">Voir PDF</span>
                 </Link>
               </Button>

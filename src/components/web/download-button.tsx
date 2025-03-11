@@ -14,7 +14,7 @@ export function DownloadButton() {
         className="group"
       >
         <Download className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
-        <span className="relative">Download CV</span>
+        <span className="relative">Télécgarger PDF</span>
       </PDFDownloadLink>
     </Button>
   );

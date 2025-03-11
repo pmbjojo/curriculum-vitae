@@ -42,7 +42,7 @@ export function AnimatedTimelineItem({
       <motion.div className="rounded-lg border bg-card p-5 shadow-sm hover:shadow-md transition-shadow">
         <div className="mb-3">
           <h4 className="text-xl font-bold">{title}</h4>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-muted-foreground">
+          <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 text-muted-foreground">
             <div className="flex items-center gap-1">
               <Building className="h-4 w-4" />
               {organization.url ? (

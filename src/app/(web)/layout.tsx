@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
       <main className="grow">
         <Hero scrollTo={() => scrollToRef.current?.scrollIntoView()} />
-        <section ref={scrollToRef} className="w-full md:py-16 bg-muted">
+        <section ref={scrollToRef} className="w-full py-8 md:py-16 bg-muted">
           <div className="container px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <div className="grid w-full grid-cols-3 mb-8 justify-center">
+              <div className="md:grid w-full md:grid-cols-3 flex flex-col mb-8 justify-center">
                 <Tab Icon={Briefcase} href="/">
                   Expérience
                 </Tab>

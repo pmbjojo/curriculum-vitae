@@ -20,12 +20,12 @@ export function Tab({
       role="tab"
       href={href}
       className={cn(
-        "flex items-center justify-center gap-2 rounded-sm py-1",
+        "flex items-center justify-center gap-2 rounded-sm py-2",
         isActive ? "bg-background" : ""
       )}
     >
       <Icon className="size-4" />
-      <span className="hidden sm:inline">{children}</span>
+      <span>{children}</span>
     </Link>
   );
 }
