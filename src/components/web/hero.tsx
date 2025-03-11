@@ -126,11 +126,11 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <HighlightCard title="Experience">
+          <HighlightCard title="Expérience">
             3+ années d&apos;expérience en développement logiciel
           </HighlightCard>
           <HighlightCard title="Formation">{degree}</HighlightCard>
-          <HighlightCard title="Location">Normandie, France</HighlightCard>
+          <HighlightCard title="Localisation">Normandie, France</HighlightCard>
         </motion.div>
 
         <motion.div
