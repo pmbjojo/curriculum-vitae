@@ -15,22 +15,7 @@ export default function EducationPage() {
           location={e.address.city}
           period={displayInterval(e.dates)}
         >
-          <p className="mb-2">
-            Specialized in Human-Computer Interaction and Web Technologies.
-          </p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>GPA: 3.9/4.0</li>
-            <li>
-              Master&apos;s Thesis: &quot;Improving User Experience in
-              Progressive Web Applications&quot;
-            </li>
-            <li>Teaching Assistant for Web Development courses</li>
-            <li>Received the Outstanding Graduate Student Award</li>
-          </ul>
-          <p className="mt-2 text-sm font-medium">
-            Key courses: Advanced Algorithms, Machine Learning, UI/UX Design,
-            Web Systems
-          </p>
+          {e.description}
         </AnimatedTimelineItem>
       ))}
     </div>

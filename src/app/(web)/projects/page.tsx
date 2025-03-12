@@ -15,24 +15,7 @@ export default function ProjectsPage() {
           organization={{ name: p.type }}
           period={p.year.toString()}
         >
-          <p className="mb-2">
-            A full-featured e-commerce platform built with Next.js and a
-            headless CMS.
-          </p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>
-              Implemented cart functionality, user authentication, and payment
-              processing
-            </li>
-            <li>Built a custom admin dashboard for inventory management</li>
-            <li>
-              Optimized for SEO and performance, achieving 95+ Lighthouse scores
-            </li>
-            <li>Over 500 stars on GitHub and 50+ contributors</li>
-          </ul>
-          <p className="mt-2 text-sm font-medium">
-            Technologies: {p.technologies.join(", ")}
-          </p>
+          {p.description}
           <div className="mt-3">
             <Link
               href="https://github.com"

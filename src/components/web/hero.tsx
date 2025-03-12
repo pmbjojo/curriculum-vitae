@@ -14,7 +14,8 @@ import { SocialLink } from "./social-link";
 export function Hero({ scrollTo }: { scrollTo: () => void }) {
   const heroRef = useRef<HTMLDivElement>(null);
   const degree = data.education.find(
-    (e) => e.institution === "ESEO Angers"
+    // (e) => e.institution === "ESEO Angers"
+    (e) => e.institution === "Université de la Vie"
   )?.degree;
   return (
     <section
@@ -105,7 +106,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           >
             <div className="relative aspect-square overflow-hidden rounded-full border-4 border-background shadow-xl w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]">
               <Image
-                src="/profile.jpg?height=400&width=400"
+                src="/johnny.jpg?height=400&width=400"
                 alt="Profile picture"
                 fill
                 className="object-cover"
@@ -127,10 +128,11 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <HighlightCard title="Expérience">
-            3+ années d&apos;expérience en développement logiciel
+            Aucun défi n’est trop grand, aucune mission trop risquée
+            {/* 3+ années d&apos;expérience en développement logiciel */}
           </HighlightCard>
           <HighlightCard title="Formation">{degree}</HighlightCard>
-          <HighlightCard title="Localisation">Normandie, France</HighlightCard>
+          <HighlightCard title="Localisation">Anywhere Man</HighlightCard>
         </motion.div>
 
         <motion.div
