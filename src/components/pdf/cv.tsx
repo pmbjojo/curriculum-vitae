@@ -1,4 +1,4 @@
-import { data } from "@/schemas";
+import { meta } from "@/data";
 import { Document, Page, View } from "@react-pdf/renderer";
 import { styles } from "./styles";
 import { Header } from "./sections/header";
@@ -14,13 +14,13 @@ import { References } from "./sections/references";
 export function CurriculumVitae() {
   return (
     <Document
-      author={data.firstName + " " + data.lastName}
-      keywords={data.keywords.join(", ")}
+      author={meta.firstName + " " + meta.lastName}
+      keywords={meta.keywords.join(", ")}
       subject="Curriculum Vitae"
-      title={data.title}
+      title={meta.title}
       creationDate={new Date()}
-      creator={data.firstName + " " + data.lastName}
-      producer={data.firstName + " " + data.lastName}
+      creator={meta.firstName + " " + meta.lastName}
+      producer={meta.firstName + " " + meta.lastName}
       language="fr"
     >
       <Page style={styles.page}>

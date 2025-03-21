@@ -1,11 +1,11 @@
-import { data } from "@/schemas";
+import { meta } from "@/data";
 import { styles } from "../styles";
 import { Text, View } from "@react-pdf/renderer";
 
 export function Summary() {
   return (
     <View style={styles.summary}>
-      <Text>{data.summary}</Text>
+      <Text>{meta.summary}</Text>
     </View>
   );
 }

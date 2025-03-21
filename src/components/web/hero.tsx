@@ -6,20 +6,16 @@ import { Button } from "../ui/button";
 import { ChevronDown, FileText, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { data } from "@/schemas";
+import { meta } from "@/data";
 import { DownloadButton } from "./download-button";
 import { HighlightCard } from "./highlight-card";
 import { SocialLink } from "./social-link";
+import { IconSpan } from "./icon-span";
 
 export function Hero({ scrollTo }: { scrollTo: () => void }) {
   const heroRef = useRef<HTMLDivElement>(null);
-  const degree = data.education.find(
-    // (e) => e.institution === "ESEO Angers"
-    (e) => e.institution === "Université de la Vie"
-  )?.degree;
   return (
     <section
-      id="hero"
       ref={heroRef}
       className="w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden"
     >
@@ -38,7 +34,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {data.firstName} {data.lastName}
+                {meta.firstName} {meta.lastName}
               </motion.h1>
               <motion.h2
                 className="text-xl font-medium text-muted-foreground md:text-2xl"
@@ -46,7 +42,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                {data.title}
+                {meta.title}
               </motion.h2>
               <motion.p
                 className="max-w-[600px] text-muted-foreground md:text-xl"
@@ -54,7 +50,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                {data.summary}
+                {meta.summary}
               </motion.p>
             </div>
             <motion.div
@@ -64,15 +60,18 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Button asChild>
-                <Link href={`mailto:${data.email}`} className="group">
-                  <Mail className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
-                  <span className="relative">Contactez Moi</span>
+                <Link href={`mailto:${meta.email}`} className="group">
+                  <IconSpan Icon={Mail}>Contactez Moi</IconSpan>
                 </Link>
               </Button>
               <Button asChild variant="outline" className="hidden md:flex">
-                <Link href="/pdf" className="group">
-                  <FileText className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
-                  <span className="relative">Voir PDF</span>
+                <Link
+                  href="/pdf"
+                  className="group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconSpan Icon={FileText}>Voir PDF</IconSpan>
                 </Link>
               </Button>
               <DownloadButton />
@@ -83,7 +82,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              {data.socials.map((s) => (
+              {meta.socials.map((s) => (
                 <SocialLink
                   key={s.name}
                   name={s.name}
@@ -106,7 +105,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           >
             <div className="relative aspect-square overflow-hidden rounded-full border-4 border-background shadow-xl w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]">
               <Image
-                src="/johnny.jpg?height=400&width=400"
+                src="/profile.jpg?height=400&width=400"
                 alt="Profile picture"
                 fill
                 className="object-cover"
@@ -128,11 +127,14 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <HighlightCard title="Expérience">
-            Aucun défi n’est trop grand, aucune mission trop risquée
-            {/* 3+ années d&apos;expérience en développement logiciel */}
+            {meta.highlights.experience}
           </HighlightCard>
-          <HighlightCard title="Formation">{degree}</HighlightCard>
-          <HighlightCard title="Localisation">Anywhere Man</HighlightCard>
+          <HighlightCard title="Formation">
+            {meta.highlights.education}
+          </HighlightCard>
+          <HighlightCard title="Localisation">
+            {meta.highlights.localisation}
+          </HighlightCard>
         </motion.div>
 
         <motion.div

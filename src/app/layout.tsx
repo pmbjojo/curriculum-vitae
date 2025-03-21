@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { data } from "@/schemas";
+import { meta } from "@/data";
 import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${data.firstName} ${data.lastName}`,
-  description: `Curriculum Vitae de ${data.firstName} ${data.lastName}`,
+  title: `${meta.firstName} ${meta.lastName}`,
+  description: `Curriculum Vitae de ${meta.firstName} ${meta.lastName}`,
   authors: [
     {
-      name: `${data.firstName} ${data.lastName}`,
+      name: `${meta.firstName} ${meta.lastName}`,
     },
   ],
 };

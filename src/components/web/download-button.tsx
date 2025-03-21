@@ -4,6 +4,7 @@ import { PDFDownloadLink } from "@/components/helpers/dynamic";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { CurriculumVitae } from "../pdf/cv";
+import { IconSpan } from "./icon-span";
 
 export function DownloadButton() {
   return (
@@ -13,8 +14,7 @@ export function DownloadButton() {
         fileName="Curriculum Vitae Joshua JOURDAM.pdf"
         className="group"
       >
-        <Download className="mr-2 h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
-        <span className="relative">Télécharger PDF</span>
+        <IconSpan Icon={Download}>Télécharger PDF</IconSpan>
       </PDFDownloadLink>
     </Button>
   );

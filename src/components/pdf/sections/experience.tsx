@@ -1,5 +1,5 @@
 import { displayInterval } from "@/lib/utils";
-import { data } from "@/schemas";
+import { meta } from "@/data";
 import { Text, View } from "@react-pdf/renderer";
 import { styles } from "../styles";
 import { Section } from "../blocks/section";
@@ -10,8 +10,8 @@ export function Experience() {
   return (
     <Section title="Expérience">
       <View style={styles.column}>
-        {data.experience.map((e) => (
-          <View key={e.company} style={{ gap: 3 }}>
+        {meta.experience.map((e) => (
+          <View key={e.website} style={{ gap: 3 }}>
             <View>
               <View style={styles.row}>
                 <Text style={styles.h2}>
@@ -19,7 +19,10 @@ export function Experience() {
                 </Text>
                 <Text>{displayInterval(e.dates)}</Text>
               </View>
-              <Institution institution={e.company} city={e.address.city} />
+              <Institution
+                institution={e.address.institution}
+                city={e.address.city}
+              />
             </View>
             <List items={e.tasks} />
             <Text>Technologies : {e.technologies.join(", ")}</Text>

@@ -1,22 +1,23 @@
 "use client";
 
-import { AnimatedTimelineItem } from "@/components/web/timeline";
+import { TimelineCard } from "@/components/web/timeline-card";
 import { displayInterval } from "@/lib/utils";
-import { data } from "@/schemas";
+import { meta } from "@/data";
 
 export default function EducationPage() {
   return (
     <div className="relative border-l-2 border-primary/20 pl-6 ml-3 space-y-10">
-      {data.education.map((e) => (
-        <AnimatedTimelineItem
+      {meta.education.map((e) => (
+        <TimelineCard
           key={e.degree}
           title={e.degree}
-          organization={{ name: e.institution, url: e.website }}
-          location={e.address.city}
+          organization={{ name: e.address.institution, url: e.website }}
+          address={e.address}
           period={displayInterval(e.dates)}
         >
-          {e.description}
-        </AnimatedTimelineItem>
+          <p>{e.description}</p>
+          <p>Cours: {e.keyCourses?.join(", ")}</p>
+        </TimelineCard>
       ))}
     </div>
   );

@@ -1,30 +1,31 @@
 "use client";
 
-import { AnimatedTimelineItem } from "@/components/web/timeline";
+import { TimelineCard } from "@/components/web/timeline-card";
 import { displayInterval } from "@/lib/utils";
-import { data } from "@/schemas";
+import { meta } from "@/data";
+import { Technologies } from "@/components/web/technologies";
 
 export default function ExperiencePage() {
   return (
     <div className="relative border-l-2 border-primary/20 pl-6 ml-3 space-y-10">
-      {data.experience.map((e) => (
-        <AnimatedTimelineItem
-          key={e.company}
+      {meta.experience.map((e) => (
+        <TimelineCard
+          key={e.address.institution}
           title={e.title}
-          organization={{ name: e.company }}
-          location={e.address.city}
+          organization={{ name: e.address.institution, url: e.website }}
+          address={e.address}
           period={displayInterval(e.dates)}
         >
-          <p className="mb-2">{e.description}</p>
-          <ul className="list-disc pl-5 space-y-1">
-            {e.tasks.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-          <p className="mt-2 text-sm font-medium">
-            Technologies: {e.technologies.join(", ")}
-          </p>
-        </AnimatedTimelineItem>
+          <div className="flex flex-col gap-2">
+            <p>{e.description}</p>
+            <ul className="list-disc list-inside">
+              {e.tasks.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+            <Technologies technologies={e.technologies} />
+          </div>
+        </TimelineCard>
       ))}
     </div>
   );

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
-import { data } from "@/schemas";
+import { meta } from "@/data";
 
 const styles = StyleSheet.create({
   keywords: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 export function Keywords() {
   return (
     <View style={styles.keywords}>
-      {data.keywords.map((k) => (
+      {meta.keywords.map((k) => (
         <Text key={k}>{k}</Text>
       ))}
     </View>

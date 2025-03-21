@@ -1,4 +1,4 @@
-import { data } from "@/schemas";
+import { meta } from "@/data";
 import {
   // StyleSheet,
   Text,
@@ -30,7 +30,7 @@ export function Skills() {
   return (
     <Section title="Compétences">
       <View style={styles.column}>
-        {data.skills.map((s) => (
+        {meta.skills.map((s) => (
           <View key={s.domain}>
             <Text style={styles.domain}>{s.domain}</Text>
             <Text>{s.items.join(", ")}</Text>
