@@ -17,8 +17,8 @@ export const cv: TCV = {
   phone: "+33 6 67 18 13 24",
   socials,
   highlights: {
-    experience: "3+ années d'expérience en développement logiciel",
-    education: "Diplôme d'Ingénieur Informatique en Apprentissage",
+    experience: "+3 années d'expérience en développement logiciel",
+    education: "Diplôme d'Ingénieur en Informatique et Systèmes d'Information",
     localisation: "Normandie, France",
   },
   address: {

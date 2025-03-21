@@ -1,7 +1,7 @@
 "use client";
 
 import { PDFViewer } from "@/components/helpers/dynamic";
-import { CurriculumVitae } from "@/components/pdf/cv";
+import { CurriculumVitae } from "@/app/pdf/_components/cv";
 
 export default function PdfPage() {
   return (

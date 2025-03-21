@@ -4,11 +4,12 @@ import { Technologies } from "@/components/web/technologies";
 import { TimelineCard } from "@/components/web/timeline-card";
 import { meta } from "@/data";
 
-export default function ProjectsPage() {
+export default function ProjectsTab() {
   return (
     <div className="relative border-l-2 border-primary/20 pl-6 ml-3 space-y-10">
-      {meta.projects.map((p) => (
+      {meta.projects.map((p, i) => (
         <TimelineCard
+          index={i}
           key={p.title}
           title={p.title}
           repository={p.repository}

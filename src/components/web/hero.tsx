@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { ChevronDown, FileText, Mail } from "lucide-react";
+import { ChevronRight, FileText, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { meta } from "@/data";
@@ -17,9 +17,9 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
   return (
     <section
       ref={heroRef}
-      className="w-full py-12 md:py-24 lg:py-32 bg-background overflow-hidden"
+      className="w-full py-12 md:py-24 lg:py-32 overflow-hidden"
     >
-      <div className="container px-4 md:px-6">
+      <div className="container px-4">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
           <motion.div
             className="flex flex-col justify-center space-y-4"
@@ -150,7 +150,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
             onClick={scrollTo}
           >
             <span className="mr-2">Mon Parcours</span>
-            <ChevronDown className="h-4 w-4 transition-transform group-hover:translate-y-1" />
+            <ChevronRight className="h-4 w-4 transition-transform group-hover:rotate-90" />
           </Button>
         </motion.div>
       </div>
