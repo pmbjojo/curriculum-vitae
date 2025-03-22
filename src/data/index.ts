@@ -6,6 +6,12 @@ import { languages } from "./languages";
 import { socials } from "./socials";
 import { skills } from "./skills";
 import { references } from "./references";
+import { intervalToDuration } from "date-fns";
+
+const yearsOfExperience = intervalToDuration({
+  start: experience[0].dates.start,
+  end: new Date(),
+}).years;
 
 export const cv: TCV = {
   title: "Développeur Full Stack",
@@ -17,7 +23,7 @@ export const cv: TCV = {
   phone: "+33 6 67 18 13 24",
   socials,
   highlights: {
-    experience: "+3 années d'expérience en développement logiciel",
+    experience: `+${yearsOfExperience} années d'expérience en développement logiciel`,
     education: "Diplôme d'Ingénieur en Informatique et Systèmes d'Information",
     localisation: "Normandie, France",
   },
