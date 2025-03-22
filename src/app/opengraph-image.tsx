@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
-
-export const runtime = "edge";
+import { join } from "node:path";
+import { readFile } from "node:fs/promises";
 
 export const alt = "Curriculum Vitae";
 export const size = {
@@ -12,12 +12,11 @@ export const contentType = "image/png";
 
 export default async function Image() {
   // You'll need to replace this with your actual profile picture URL
-  const profileImageUrl = "/profile.jpg";
-
-  // You can fetch your profile image if it's hosted online
-  // const profileImageData = await fetch(new URL(profileImageUrl, 'https://yourdomain.com')).then(
-  //   (res) => res.arrayBuffer(),
-  // )
+  const profileData = await readFile(
+    join(process.cwd(), "../../public/profile.jpg")
+  );
+  const profileSrc = Uint8Array.from(profileData).buffer;
+  const decoder = new TextDecoder();
 
   return new ImageResponse(
     (
@@ -58,7 +57,7 @@ export default async function Image() {
           >
             {/* Replace with your actual profile picture */}
             <img
-              src={profileImageUrl || "/placeholder.svg"}
+              src={decoder.decode(profileSrc)}
               alt="Profile"
               width={200}
               height={200}
