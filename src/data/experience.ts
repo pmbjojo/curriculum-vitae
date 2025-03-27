@@ -24,6 +24,7 @@ export const experience: TExperience[] = [
       "Mise en place d'une plateforme de génération de systèmes d'exploitation Linux",
     ],
     technologies: [
+      // Optimistic Updates, Form Handling, Validation, Authentication, Authorization
       "TypeScript",
       "React",
       "C++",
