@@ -22,10 +22,11 @@ export const cv: TCV = {
   email: "jourdamj@gmail.com",
   phone: "+33 6 67 18 13 24",
   socials,
+  website: "https://joshua-jourdam.vercel.app/",
   highlights: {
     experience: `+${yearsOfExperience} années d'expérience en développement logiciel`,
     education: "Diplôme d'Ingénieur en Informatique et Systèmes d'Information",
-    localisation: "Normandie, France",
+    localisation: "Disponible sur la région Grand Ouest",
   },
   address: {
     institution: "Home",
@@ -43,8 +44,9 @@ export const cv: TCV = {
   education,
   languages,
   summary:
-    // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département Recherche et Développement de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement logiciel.",
-    "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département R&D de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement web full stack.",
+    "Ingénieur diplômé de l'ESEO Angers avec 3 ans d'expérience en apprentissage dans la R&D chez SDEL Contrôle Commande (VINCI Energies). Expérience en développement full stack, spécialisé en React et .NET.",
+  // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département Recherche et Développement de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement logiciel.",
+  // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département R&D de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement web full stack.",
   hobbies: ["Serveur domestique", "Ecosystème Linux"],
   references,
 };

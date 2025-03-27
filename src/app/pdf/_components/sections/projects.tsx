@@ -1,4 +1,4 @@
-import { Text, View } from "@react-pdf/renderer";
+import { Link, Text, View } from "@react-pdf/renderer";
 import { styles } from "../styles";
 import { meta } from "@/data";
 import { Section } from "../blocks/section";
@@ -9,7 +9,10 @@ export function Projects() {
       <View style={styles.column}>
         {meta.projects.map((p) => (
           <View key={p.title}>
-            <Text style={styles.domain}>{p.summary}</Text>
+            <Link style={styles.domain} href={p.repository}>
+              {p.name}
+            </Link>
+            <Text style={styles.fade}>{p.summary}</Text>
             <Text>{p.technologies.join(", ")}</Text>
           </View>
         ))}

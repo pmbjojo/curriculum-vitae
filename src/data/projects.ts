@@ -3,18 +3,20 @@ import { TProject } from "@/schemas";
 export const projects: TProject[] = [
   {
     title: "SIGL",
-    summary: "Journal de formation des apprentis",
+    name: "Journal de formation des apprentis",
+    summary:
+      "Plateforme de gestion des formations et des suivis d'apprentissage",
     description:
       "Une plateforme web permettant aux apprentis de suivre et documenter leur formation. Elle inclut des fonctionnalités de gestion des mémoires de fin d'études, de saisie des notes, d'organisation des entretiens et soutenances, ainsi qu'un système d'authentification et de rôles.",
     technologies: ["NextJS", "tRPC", "Prisma", "PostgreSQL", "Mantine"],
     type: "Scolaire",
     year: 2024,
     repository: "https://gitlab.com/pmbjojo/sigl",
-    website: "",
   },
   {
     title: "Obelisk",
-    summary: "Serveur domestique",
+    name: "Serveur domestique",
+    summary: "Hébergement auto-géré de services multimédias et cloud personnel",
     description:
       "Un homelab personnel permettant d'héberger divers services comme un cloud privé, une bibliothèque multimédia et un serveur de streaming. Il sert aussi de terrain d'expérimentation pour le déploiement et l'administration de nouvelles technologies.",
     technologies: ["Docker", "Ubuntu", "Streaming"],
@@ -34,18 +36,21 @@ export const projects: TProject[] = [
   // },
   {
     title: "Flashmobiles",
-    summary: "Jeu avec voitures télécommandées",
+    name: "Jeu avec voitures télécommandées",
+    summary:
+      "Jeu où des voitures télécommandées sont contrôlées via une interface web en temps réel",
     description:
       "Un projet universitaire consistant à développer un jeu où des voitures télécommandées sont contrôlées via une interface web en temps réel. Utilisation d'un Raspberry Pi pour la communication avec les véhicules.",
-    technologies: ["Python", "Tornado", "Raspberry", "Javascript"],
+    technologies: ["Python", "Tornado", "Raspberry", "JavaScript"],
     type: "Scolaire",
     year: 2021,
-    repository: "",
-    website: "",
+    // repository: "",
   },
   {
     title: "Vodkify",
-    summary: "Client Spotify alternatif",
+    name: "Client Spotify alternatif",
+    summary:
+      "Application permettant d'explorer et d'écouter de la musique sans passer par le client officiel",
     description:
       "Un client web alternatif pour Spotify. Il inclut des fonctionnalités de recherche et de gestion de playlists.",
     technologies: ["NextJS", "TRPC", "Clerk", "TailwindCSS", "Spotify"],
@@ -56,7 +61,8 @@ export const projects: TProject[] = [
   },
   {
     title: "Be an Artist",
-    summary: "Application de dessin",
+    name: "Application de dessin",
+    summary: "Application de bureau de dessin avec divers outils",
     description:
       "Une application Java permettant de dessiner avec divers outils (pinceaux, formes, couleurs). Développée avec Swing pour une interface graphique simple et intuitive.",
     technologies: ["Java", "Swing"],

@@ -7,11 +7,11 @@ export const styles = StyleSheet.create({
   },
   main: {
     padding: 20,
-    // paddingHorizontal: 20,
-    // paddingBottom: 20,
   },
   domain: {
     fontWeight: "bold",
+    color: "black",
+    textDecoration: "none",
   },
   summary: {
     textAlign: "justify",
@@ -35,5 +35,10 @@ export const styles = StyleSheet.create({
   },
   sections: {
     gap: 10,
+  },
+  fade: {
+    fontStyle: "italic",
+    fontSize: 8,
+    opacity: 0.8,
   },
 });

@@ -30,10 +30,11 @@ export type TAddress = z.infer<typeof SAddress>;
 export const SProject = z.object({
   title: z.string(),
   summary: z.string(),
+  name: z.string(),
   description: z.string(),
   technologies: z.array(z.string()),
-  repository: z.string().optional(),
-  website: z.string().optional(),
+  repository: z.string().url().optional(),
+  website: z.string().url().optional(),
   year: z.number(),
   type: SProjectType,
 });
@@ -53,7 +54,7 @@ export const SExperience = z.object({
   description: z.string(),
   tasks: z.array(z.string()),
   technologies: z.array(z.string()),
-  website: z.string(),
+  website: z.string().url(),
 });
 export type TExperience = z.infer<typeof SExperience>;
 
@@ -87,6 +88,7 @@ export type TLanguage = z.infer<typeof SLanguage>;
 
 export const SCV = z.object({
   title: z.string(),
+  website: z.string().url(),
   firstName: z.string(),
   lastName: z.string(),
   birthday: z.date(),

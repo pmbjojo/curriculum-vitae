@@ -1,4 +1,5 @@
 import { Text } from "@react-pdf/renderer";
+import { styles } from "../styles";
 
 export function Institution({
   institution,
@@ -8,13 +9,7 @@ export function Institution({
   city: string;
 }) {
   return (
-    <Text
-      style={{
-        fontStyle: "italic",
-        fontSize: 8,
-        opacity: 0.8,
-      }}
-    >
+    <Text style={styles.fade}>
       {institution}, {city}
     </Text>
   );

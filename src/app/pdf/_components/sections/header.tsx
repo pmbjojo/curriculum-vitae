@@ -30,18 +30,17 @@ const styles = StyleSheet.create({
     textDecoration: "none",
   },
   firstName: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: "bold",
   },
   lastName: {
-    fontSize: 20,
+    fontSize: 16,
   },
   infos: {
     display: "flex",
     flexDirection: "column",
     gap: 3,
     fontSize: 10,
-    fontWeight: "thin",
     alignItems: "flex-end",
   },
   title: {
@@ -50,7 +49,19 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   age: {
-    fontSize: 12,
+    fontSize: 10,
+  },
+  profile: {
+    width: 75,
+    height: 75,
+    borderRadius: 10,
+    objectFit: "cover",
+  },
+  personal: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 10,
+    alignItems: "center",
   },
 });
 
@@ -58,13 +69,16 @@ export function Header() {
   const linkedin = meta.socials.find((s) => s.name === "LinkedIn");
   return (
     <View style={styles.header}>
-      {/* Personal */}
-      <View>
-        <Text style={styles.firstName}>{meta.firstName}</Text>
-        <Text style={styles.lastName}>{meta.lastName}</Text>
-        <Text style={styles.age}>
-          {differenceInYears(new Date(), new Date(meta.birthday))} ans
-        </Text>
+      <View style={styles.personal}>
+        <Image src="/profile.jpg" style={styles.profile} />
+        {/* Personal */}
+        <View>
+          <Text style={styles.firstName}>{meta.firstName}</Text>
+          <Text style={styles.lastName}>{meta.lastName}</Text>
+          <Text style={styles.age}>
+            {differenceInYears(new Date(), new Date(meta.birthday))} ans
+          </Text>
+        </View>
       </View>
 
       {/* Title */}
@@ -96,6 +110,14 @@ export function Header() {
           <View style={styles.flex}>
             <Text>Permis {meta.drivingLicense}</Text>
             <Image src="/car-solid.png" style={styles.icon} />
+          </View>
+        )}
+        {meta.website && (
+          <View style={styles.flex}>
+            <Link style={styles.link} href={meta.website}>
+              Website
+            </Link>
+            <Image src="/globe-solid.png" style={styles.icon} />
           </View>
         )}
       </View>

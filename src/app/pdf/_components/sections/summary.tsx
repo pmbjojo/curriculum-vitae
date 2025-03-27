@@ -5,7 +5,9 @@ import { Text, View } from "@react-pdf/renderer";
 export function Summary() {
   return (
     <View style={styles.summary}>
-      <Text>{meta.summary}</Text>
+      <Text>
+        {meta.summary} {meta.highlights.localisation}.
+      </Text>
     </View>
   );
 }
