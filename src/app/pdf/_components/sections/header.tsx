@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   header: {
     color: "white",
     padding: 20,
-    backgroundColor: "#002060",
+    backgroundColor: "dark",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   link: {
     // inherit doesn't work
     color: "white",
+    // color: "black",
     textDecoration: "none",
   },
   firstName: {

@@ -18,7 +18,7 @@ export const projects: TProject[] = [
     name: "Serveur domestique",
     summary: "Hébergement auto-géré de services multimédias et cloud personnel",
     description:
-      "Un homelab personnel permettant d'héberger divers services comme un cloud privé, une bibliothèque multimédia et un serveur de streaming. Il sert aussi de terrain d'expérimentation pour le déploiement et l'administration de nouvelles technologies.",
+      "Un homelab personnel permettant d'héberger divers services comme un cloud privé, une bibliothèque multimédia et un serveur de streaming. Il sert aussi de terrain d'expérimentation pour des machines virtuelles et des conteneurs Docker.",
     technologies: ["Docker", "Ubuntu", "Streaming"],
     type: "Personnel",
     year: 2023,
@@ -40,7 +40,7 @@ export const projects: TProject[] = [
     summary:
       "Jeu où des voitures télécommandées sont contrôlées via une interface web en temps réel",
     description:
-      "Un projet universitaire consistant à développer un jeu où des voitures télécommandées sont contrôlées via une interface web en temps réel. Utilisation d'un Raspberry Pi pour la communication avec les véhicules.",
+      "Un projet universitaire consistant à développer un jeu où des voitures télécommandées sont contrôlées via une interface web en temps réel. Le jeu met en scène trois véhicules, un 'Tank' et deux 'Flashmobiles'. Les 'Flashmobiles' doivent percuter le tank pour marquer des points.",
     technologies: ["Python", "Tornado", "Raspberry", "JavaScript"],
     type: "Scolaire",
     year: 2021,
@@ -64,7 +64,7 @@ export const projects: TProject[] = [
     name: "Application de dessin",
     summary: "Application de bureau de dessin avec divers outils",
     description:
-      "Une application Java permettant de dessiner avec divers outils (pinceaux, formes, couleurs). Développée avec Swing pour une interface graphique simple et intuitive.",
+      "Une application Java permettant de dessiner avec divers outils (pinceaux, formes, couleurs). Développée dans le cadre d'un projet scolaire pour apprendre à utiliser Java Swing et la programmation orientée objet.",
     technologies: ["Java", "Swing"],
     type: "Scolaire",
     year: 2022,

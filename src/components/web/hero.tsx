@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { ChevronRight, FileText, Mail } from "lucide-react";
+import { ChevronRight, Download, FileText, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { meta } from "@/data";
@@ -11,6 +11,7 @@ import { DownloadButton } from "./download-button";
 import { HighlightCard } from "./highlight-card";
 import { SocialLink } from "./social-link";
 import { IconSpan } from "./icon-span";
+import Profile from "@/public/profile.jpg";
 
 export function Hero({ scrollTo }: { scrollTo: () => void }) {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -66,7 +67,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
               </Button>
               <Button asChild variant="outline" className="hidden md:flex">
                 <Link
-                  href="/pdf"
+                  href="/web"
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -74,7 +75,11 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
                   <IconSpan Icon={FileText}>Voir PDF</IconSpan>
                 </Link>
               </Button>
-              <DownloadButton />
+              <Button asChild variant="outline" className="hidden md:flex">
+                <Link href="/api/pdf" className="group">
+                  <IconSpan Icon={Download}>Télécharger PDF</IconSpan>
+                </Link>
+              </Button>
             </motion.div>
             <motion.div
               className="flex items-center gap-4 mt-4"
@@ -105,9 +110,8 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           >
             <div className="relative aspect-square overflow-hidden rounded-full border-4 border-background shadow-xl w-[280px] h-[280px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px]">
               <Image
-                src="/profile.jpg?height=400&width=400"
-                alt="Profile picture"
-                fill
+                src={Profile}
+                alt="Profile"
                 className="object-cover"
                 priority
               />

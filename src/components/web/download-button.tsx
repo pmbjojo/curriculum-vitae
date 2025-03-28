@@ -3,7 +3,7 @@
 import { PDFDownloadLink } from "@/components/helpers/dynamic";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { CurriculumVitae } from "../../app/pdf/_components/cv";
+import { CurriculumVitae } from "@/app/pdf/_components/cv";
 import { IconSpan } from "./icon-span";
 
 export function DownloadButton() {
