@@ -2,15 +2,14 @@
 
 import { useRef } from "react";
 import { motion } from "motion/react";
-import { Button } from "../ui/button";
+import { Button } from "../../../components/ui/button";
 import { ChevronRight, Download, FileText, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { meta } from "@/data";
-import { DownloadButton } from "./download-button";
-import { HighlightCard } from "./highlight-card";
-import { SocialLink } from "./social-link";
-import { IconSpan } from "./icon-span";
+import { HighlightCard } from "../../../components/web/highlight-card";
+import { SocialLink } from "../../../components/web/social-link";
+import { IconSpan } from "../../../components/web/icon-span";
 import Profile from "@/public/profile.jpg";
 
 export function Hero({ scrollTo }: { scrollTo: () => void }) {
@@ -67,7 +66,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
               </Button>
               <Button asChild variant="outline" className="hidden md:flex">
                 <Link
-                  href="/web"
+                  href="/pdf"
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -37,7 +37,7 @@ export const cv: TCV = {
     country: "France",
   },
   drivingLicense: "B",
-  keywords: ["TypeScript", "React", ".Net", "Linux"],
+  keywords: ["TypeScript", "React", ".NET", "Linux"],
   skills,
   projects,
   experience,

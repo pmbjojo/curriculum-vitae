@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function References() {
   return (
-    <Section title="Références" className="grow">
+    <Section title="Références">
       {meta.references.map((r) => (
         <div key={r.name}>
           <div className="flex justify-between">

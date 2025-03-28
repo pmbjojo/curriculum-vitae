@@ -2,7 +2,7 @@
 
 import { Briefcase, GraduationCap, FolderGit2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Hero } from "@/components/web/hero";
+import { Hero } from "./_components/hero";
 import { useRef } from "react";
 import { ModeToggle } from "@/components/mode-toggle";
 import ScrollToTopButton from "@/components/scroll-to-top";
