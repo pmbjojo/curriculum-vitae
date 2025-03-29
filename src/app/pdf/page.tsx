@@ -7,7 +7,7 @@ import { fileName } from "@/lib/utils";
 
 export default function PdfPage() {
   return (
-    <div className="m-8 flex flex-col items-center">
+    <div className="p-10 overflow-x-scroll">
       <div className="fixed flex gap-3 bottom-5 right-5 print:hidden flex-col sm:flex-row">
         <Button
           onClick={() => window.print()}
@@ -24,9 +24,7 @@ export default function PdfPage() {
           </a>
         </Button>
       </div>
-      <div className="rounded-md shadow-lg overflow-hidden">
-        <CurriculumVitae />
-      </div>
+      <CurriculumVitae />
     </div>
   );
 }
