@@ -7,7 +7,7 @@ import { fileName } from "@/lib/utils";
 
 export default function PdfPage() {
   return (
-    <div className="p-10 overflow-x-scroll">
+    <>
       <div className="fixed flex gap-3 bottom-5 right-5 print:hidden flex-col sm:flex-row">
         <Button
           onClick={() => window.print()}
@@ -25,6 +25,6 @@ export default function PdfPage() {
         </Button>
       </div>
       <CurriculumVitae />
-    </div>
+    </>
   );
 }

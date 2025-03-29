@@ -16,7 +16,7 @@ export function Meta({
   return (
     <div className="flex items-center gap-1">
       <div className="text-xs">{children}</div>
-      <Icon className="size-4 bg-blue-400 rounded-xs p-0.5" />
+      <Icon className="size-4 bg-[#80a5d8] rounded-xs p-0.5 stroke-black" />
     </div>
   );
 }
@@ -37,7 +37,7 @@ export function Header({ color }: { color?: string }) {
         <div className="flex flex-col">
           <span className="text-2xl font-bold">{meta.firstName}</span>
           <span className="text-xl">{meta.lastName}</span>
-          <span className="text-lg font-thin">
+          <span className="text-lg font-extralight">
             {differenceInYears(new Date(), new Date(meta.birthday))} ans
           </span>
         </div>
