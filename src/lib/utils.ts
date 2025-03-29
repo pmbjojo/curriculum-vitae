@@ -1,3 +1,4 @@
+import { meta } from "@/data";
 import { SDates } from "@/schemas";
 import { clsx, type ClassValue } from "clsx";
 import { format, formatDuration, intervalToDuration } from "date-fns";
@@ -29,3 +30,7 @@ export function displayInterval(
     format(dates.end, formatStr, { locale: fr })
   );
 }
+
+export const fileName = `CV ${
+  meta.firstName
+} ${meta.lastName.toUpperCase()}.pdf`;

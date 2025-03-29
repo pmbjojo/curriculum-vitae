@@ -1,26 +1,32 @@
 "use client";
 
 import { Download, Printer } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CurriculumVitae } from "./_components/curriculum-vitae";
+import { fileName } from "@/lib/utils";
 
 export default function PdfPage() {
   return (
-    <div>
-      <div className="fixed flex gap-1 bottom-5 right-5 print:hidden">
-        <Button onClick={() => window.print()}>
+    <div className="m-8 flex flex-col items-center">
+      <div className="fixed flex gap-3 bottom-5 right-5 print:hidden flex-col sm:flex-row">
+        <Button
+          onClick={() => window.print()}
+          variant="outline"
+          className="size-9 sm:size-auto"
+        >
           <Printer />
-          Imprimer
+          <span className="hidden sm:block">Imprimer</span>
         </Button>
-        <Button asChild>
-          <Link href="/api/pdf">
+        <Button asChild className="size-9 sm:size-auto" variant="outline">
+          <a href={`/${fileName}`} download>
             <Download />
-            Télécharger
-          </Link>
+            <span className="hidden sm:block">Télécharger</span>
+          </a>
         </Button>
       </div>
-      <CurriculumVitae />
+      <div className="rounded-md shadow-lg overflow-hidden">
+        <CurriculumVitae />
+      </div>
     </div>
   );
 }

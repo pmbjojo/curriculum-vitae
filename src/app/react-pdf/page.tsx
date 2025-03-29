@@ -1,7 +1,7 @@
 "use client";
 
 import { PDFViewer } from "@/components/helpers/dynamic";
-import { CurriculumVitae } from "@/app/react-pdf/_components/cv";
+import { CurriculumVitae } from "@/app/react-pdf/_components/curriculum-vitae";
 
 export default function ReactPdfPage() {
   return (

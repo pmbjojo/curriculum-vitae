@@ -1,10 +1,16 @@
 import "@/styles/globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { meta } from "@/data";
 import { Analytics } from "@vercel/analytics/react";
 import { ParticlesProvider } from "@/components/particles-provider";
 import { geistMono, geistSans, roboto } from "@/styles/fonts";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: `${meta.firstName} ${meta.lastName}`,

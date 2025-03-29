@@ -16,7 +16,7 @@ export function Meta({
   return (
     <div className="flex items-center gap-1">
       <div className="text-xs">{children}</div>
-      <Icon className="size-4 bg-blue-900 rounded-xs p-0.5" />
+      <Icon className="size-4 bg-blue-400 rounded-xs p-0.5" />
     </div>
   );
 }

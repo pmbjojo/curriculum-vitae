@@ -38,7 +38,11 @@ const ScrollToTopButton = () => {
   return (
     <>
       {showButton && (
-        <Button onClick={scrollToTop} className="fixed bottom-4 right-4 z-50">
+        <Button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 z-50"
+          size="icon"
+        >
           <ArrowUpIcon />
         </Button>
       )}

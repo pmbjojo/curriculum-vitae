@@ -11,6 +11,7 @@ import { HighlightCard } from "../../../components/web/highlight-card";
 import { SocialLink } from "../../../components/web/social-link";
 import { IconSpan } from "../../../components/web/icon-span";
 import Profile from "@/public/profile.jpg";
+import { fileName } from "@/lib/utils";
 
 export function Hero({ scrollTo }: { scrollTo: () => void }) {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -64,7 +65,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
                   <IconSpan Icon={Mail}>Contactez Moi</IconSpan>
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="hidden md:flex">
+              <Button asChild variant="outline">
                 <Link
                   href="/pdf"
                   className="group"
@@ -74,10 +75,10 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
                   <IconSpan Icon={FileText}>Voir PDF</IconSpan>
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="hidden md:flex">
-                <Link href="/api/pdf" className="group">
+              <Button asChild variant="outline">
+                <a href={`/${fileName}`} className="group" download={fileName}>
                   <IconSpan Icon={Download}>Télécharger PDF</IconSpan>
-                </Link>
+                </a>
               </Button>
             </motion.div>
             <motion.div
