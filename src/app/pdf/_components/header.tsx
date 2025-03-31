@@ -55,13 +55,13 @@ export function Header({ color }: { color?: string }) {
             <Link href={linkedin.link}>{linkedin.name}</Link>
           </Meta>
         )}
-        {meta.drivingLicense && (
-          <Meta Icon={Car}>Permis {meta.drivingLicense}</Meta>
-        )}
         {meta.website && (
           <Meta Icon={Globe}>
             <Link href={meta.website}>Website</Link>
           </Meta>
+        )}
+        {meta.drivingLicense && (
+          <Meta Icon={Car}>Permis {meta.drivingLicense}</Meta>
         )}
       </div>
     </div>
