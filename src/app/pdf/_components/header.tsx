@@ -35,9 +35,11 @@ export function Header({ color }: { color?: string }) {
           className="size-24 rounded-xl object-cover"
         />
         <div className="flex flex-col">
-          <span className="text-2xl font-bold">{meta.firstName}</span>
-          <span className="text-xl">{meta.lastName}</span>
-          <span className="text-lg font-extralight">
+          <span className="text-[1.5rem] font-bold ligne leading-tight">
+            {meta.firstName}
+          </span>
+          <span className="text-[1.25rem] leading-tight">{meta.lastName}</span>
+          <span className="text-[0.825rem] font-extralight leading-tight">
             {differenceInYears(new Date(), new Date(meta.birthday))} ans
           </span>
         </div>
