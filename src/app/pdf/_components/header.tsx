@@ -22,7 +22,6 @@ export function Meta({
 }
 
 export function Header({ color }: { color?: string }) {
-  const linkedin = meta.socials.find((s) => s.name === "LinkedIn");
   return (
     <div
       style={{ backgroundColor: color }}
@@ -34,38 +33,51 @@ export function Header({ color }: { color?: string }) {
           alt="Profile"
           className="size-24 rounded-xl object-cover"
         />
-        <div className="flex flex-col">
-          <span className="text-[1.5rem] font-bold ligne leading-tight">
-            {meta.firstName}
-          </span>
-          <span className="text-[1.25rem] leading-tight">{meta.lastName}</span>
-          <span className="text-[0.825rem] font-extralight leading-tight">
-            {differenceInYears(new Date(), new Date(meta.birthday))} ans
-          </span>
-        </div>
+        <PersonalDetails />
       </div>
       <div className="text-3xl font-bold">{meta.title}</div>
-      <div className="flex flex-col items-end gap-0.5">
-        <Meta Icon={Mail}>
-          <Link href={`mailto:${meta.email}`}>{meta.email}</Link>
+      <Informations />
+    </div>
+  );
+}
+
+function PersonalDetails() {
+  return (
+    <div className="flex flex-col">
+      <span className="text-[1.5rem] font-bold ligne leading-tight">
+        {meta.firstName}
+      </span>
+      <span className="text-[1.25rem] leading-tight">{meta.lastName}</span>
+      <span className="text-[0.825rem] font-extralight leading-tight">
+        {differenceInYears(new Date(), new Date(meta.birthday))} ans
+      </span>
+    </div>
+  );
+}
+
+function Informations() {
+  const linkedin = meta.socials.find((s) => s.name === "LinkedIn");
+  return (
+    <div className="flex flex-col items-end gap-0.5">
+      <Meta Icon={Mail}>
+        <Link href={`mailto:${meta.email}`}>{meta.email}</Link>
+      </Meta>
+      <Meta Icon={Phone}>
+        <Link href={`tel:${meta.phone}`}>{meta.phone}</Link>
+      </Meta>
+      {linkedin && (
+        <Meta Icon={Linkedin}>
+          <Link href={linkedin.link}>{linkedin.name}</Link>
         </Meta>
-        <Meta Icon={Phone}>
-          <Link href={`tel:${meta.phone}`}>{meta.phone}</Link>
+      )}
+      {meta.website && (
+        <Meta Icon={Globe}>
+          <Link href={meta.website}>Website</Link>
         </Meta>
-        {linkedin && (
-          <Meta Icon={Linkedin}>
-            <Link href={linkedin.link}>{linkedin.name}</Link>
-          </Meta>
-        )}
-        {meta.website && (
-          <Meta Icon={Globe}>
-            <Link href={meta.website}>Website</Link>
-          </Meta>
-        )}
-        {meta.drivingLicense && (
-          <Meta Icon={Car}>Permis {meta.drivingLicense}</Meta>
-        )}
-      </div>
+      )}
+      {meta.drivingLicense && (
+        <Meta Icon={Car}>Permis {meta.drivingLicense}</Meta>
+      )}
     </div>
   );
 }

@@ -42,7 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="grow">{children}</div>
+          <main className="grow">{children}</main>
           <ParticlesProvider />
         </ThemeProvider>
         <Analytics />
