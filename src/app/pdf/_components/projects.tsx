@@ -1,9 +1,9 @@
 import { meta } from "@/data";
 import { Section } from "./section";
 
-export function Projects() {
+export function Projects({ className }: { className?: string }) {
   return (
-    <Section title="Projets">
+    <Section title="Projets" className={className}>
       {meta.projects.map((p) => (
         <div key={p.name}>
           <h3 className="font-bold">{p.name}</h3>

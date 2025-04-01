@@ -2,9 +2,9 @@ import { meta } from "@/data";
 import { Section } from "./section";
 import Link from "next/link";
 
-export function References() {
+export function References({ className }: { className?: string }) {
   return (
-    <Section title="Références">
+    <Section title="Références" className={className}>
       {meta.references.map((r) => (
         <div key={r.name}>
           <div className="flex justify-between">

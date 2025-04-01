@@ -19,13 +19,11 @@ export function CurriculumVitae() {
         <Education />
         <div className="flex gap-3">
           <Skills />
-          <Projects />
+          <Projects className="grow" />
         </div>
         <div className="flex gap-3">
           <Languages />
-          <div className="grow">
-            <References />
-          </div>
+          <References className="grow" />
         </div>
       </div>
     </A4>
