@@ -5,6 +5,7 @@ import { meta } from "@/data";
 import { Analytics } from "@vercel/analytics/react";
 import { ParticlesProvider } from "@/components/particles-provider";
 import { geistMono, geistSans, roboto } from "@/styles/fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
       name: `${meta.firstName} ${meta.lastName}`,
     },
   ],
+  verification: {
+    google: "boQz2krzQsDPRsQAT6j0Cv1xcoa7hfKxaBijDGcBjWY",
+  },
 };
 
 export default function RootLayout({
@@ -42,6 +46,7 @@ export default function RootLayout({
           <ParticlesProvider />
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
