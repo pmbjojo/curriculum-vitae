@@ -1,4 +1,4 @@
-import { A4 } from "@/app/pdf/_components/a4";
+import { A4 } from "./a4";
 import { Header } from "./header";
 import { Summary } from "./summary";
 import { Experience } from "./experience";
