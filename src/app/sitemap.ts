@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${env.BASE_URL}/react`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 1,
+    },
+    {
       url: `${env.BASE_URL}/pdf`,
       lastModified: new Date(),
       changeFrequency: "yearly",

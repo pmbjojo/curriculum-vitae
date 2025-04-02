@@ -5,16 +5,19 @@ import Image from "next/image";
 import { ComponentType, ReactNode } from "react";
 import Profile from "@/public/profile.jpg";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export function Meta({
   Icon,
   children,
+  className,
 }: {
   Icon: ComponentType<{ className: string }>;
   children: ReactNode;
+  className?: string;
 }) {
   return (
-    <div className="flex items-center gap-1">
+    <div className={cn("flex items-center gap-1", className)}>
       <div className="text-xs">{children}</div>
       <Icon className="size-4 bg-[#80a5d8] rounded-xs p-0.5 stroke-black" />
     </div>
@@ -48,7 +51,7 @@ function PersonalDetails() {
         {meta.firstName}
       </span>
       <span className="text-[1.25rem] leading-tight">{meta.lastName}</span>
-      <span className="text-[0.825rem] font-extralight leading-tight">
+      <span className="text-[0.825rem] font-light leading-tight">
         {differenceInYears(new Date(), new Date(meta.birthday))} ans
       </span>
     </div>
@@ -72,12 +75,17 @@ function Informations() {
       )}
       {meta.website && (
         <Meta Icon={Globe}>
-          <Link href={meta.website}>Website</Link>
+          <Link href={meta.website}>Site web</Link>
         </Meta>
       )}
       {meta.drivingLicense && (
         <Meta Icon={Car}>Permis {meta.drivingLicense}</Meta>
       )}
+      {/* <Meta Icon={Home} className="hidden print:flex text-right items-start">
+        {meta.address.street}
+        <br />
+        {meta.address.zip} {meta.address.city}
+      </Meta> */}
     </div>
   );
 }

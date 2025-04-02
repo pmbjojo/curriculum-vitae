@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: `${meta.firstName} ${meta.lastName} - PDF`,
 };
 
-export default function PdfPage() {
+export default function ReactPage() {
   return (
     <>
       <Tools />
