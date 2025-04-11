@@ -6,7 +6,7 @@ export const generatePdf = async () => {
     headless: true,
   });
   const page = await browser.newPage();
-  await page.goto("http://localhost:3000/pdf", {
+  await page.goto("http://localhost:3000/react", {
     waitUntil: "networkidle0",
   });
   const pdf = await page.pdf({
