@@ -67,7 +67,7 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
               </Button>
               <Button asChild variant="outline">
                 <Link
-                  href="/react"
+                  href="/pdf"
                   className="group"
                   target="_blank"
                   rel="noopener noreferrer"
