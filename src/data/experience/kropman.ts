@@ -24,17 +24,20 @@ export const kropman: TExperience = {
       title:
         "Développement d'une application de gestion et du suivi de la diffusion de documents",
       description: `L'application inclut des fonctionnalités telles que : 
-          - Gestion des utilisateurs et des rôles
-          - Téléchargement et gestion des documents
-          - Synchronisation avec SharePoint pour le stockage des documents
-          - Notifications par e-mail
-          - Création de liste de diffusion
-          - Suivi de la prise de connaissance des documents`,
+        - Gestion des documents (téléchargement, suppression, modification)
+        - Versioning des documents
+        - Gestion des utilisateurs et des rôles
+        - Synchronisation avec SharePoint pour le stockage des documents
+        - Notifications par e-mail
+        - Création de liste de diffusion
+        - Suivi de la prise de connaissance des documents`,
       goal: "Permettre au service RH et aux responsables de gérer les documents, d'en suivre la diffusion et de s'assurer que les employés en ont bien pris connaissance.",
       roles: [
-        "Développement de l'application",
-        "Conception de l'interface utilisateur",
-        "Gestion de la base de données",
+        "Analyse des besoins fonctionnels",
+        "Conception de la base de données",
+        "Développement des interfaces utilisateur et des fonctionnalités back-end",
+        "Gestion des droits d'accès",
+        "Déploiement de l'application",
       ],
       results: [
         "Expérimentation l'application par le service RH lors de mon départ",
@@ -71,11 +74,13 @@ export const kropman: TExperience = {
         - Le service achats commande le matériel si nécessaire
         - Le matériel est livré à l'utilisateur
         - L'utilisateur peut suivre l'état de sa demande dans l'application`,
-      goal: "Mettre à niveau une application Razor Pages historique vers Blazor.",
+      goal: "Moderniser une application Razor Pages obsolète en la migrant vers Blazor, tout en repensant l'interface utilisateur et l'ergonomie.",
       roles: [
-        "Développement de l'application",
-        "Conception de l'interface utilisateur",
+        "Analyse de l'application existante",
+        "Conception de la nouvelle architecture",
         "Migration de la base de données",
+        "Développement de l'application",
+        "Déploiement de l'application",
       ],
       results: [
         "Migration complète de l'application vers Blazor",

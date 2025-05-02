@@ -28,7 +28,7 @@ export const amtech: TExperience = {
       goal: "Concevoir une caméra d'inspection opérationnelle en environnement contrôlé, tout en respectant les contraintes dimensionnelles propres aux galeries techniques.",
       roles: [
         "Rétro-ingénierie des protocoles de communication de la caméra",
-        "Développement de l'interface de communication via ethernet",
+        "Développement de l'API de contrôle de la caméra",
         "Développement du serveur de streaming vidéo",
         "Intégration dans un boitier de commande avec écran et joystick",
       ],
@@ -36,9 +36,12 @@ export const amtech: TExperience = {
         "Transmission vidéo en temps réel via un serveur web",
         "Contrôle de la caméra via un joystick",
         "Assemblage de la caméra dans un tuyau au dimensions spécifiques",
-        "Réalisation d'un boitier de commande déporté avec écran tactile et joystick",
+        "Réalisation d'un boitier de commande déporté",
       ],
-      skills: [],
+      skills: [
+        "Systèmes linux embarqués",
+        "Interfaces de communication industrielle (Ethernet/IP, SBUS, CAN BUS, UART)",
+      ],
       technologies: [
         "Raspberry Pi",
         "Python",

@@ -58,6 +58,12 @@ export default function ExperienceTab() {
                           </TableCell>
                         </TableRow>
                         <TableRow>
+                          <TableHead>Responsabilités</TableHead>
+                          <TableCell className="whitespace-normal break-words">
+                            {t.roles.join(", ")}
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
                           <TableHead>Resultats</TableHead>
                           <TableCell className="whitespace-normal break-words">
                             <ul className="list-disc list-inside">
@@ -65,12 +71,6 @@ export default function ExperienceTab() {
                                 <li key={r}>{r}</li>
                               ))}
                             </ul>
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableHead>Responsabilités</TableHead>
-                          <TableCell className="whitespace-normal break-words">
-                            {t.roles.join(", ")}
                           </TableCell>
                         </TableRow>
                         <TableRow>

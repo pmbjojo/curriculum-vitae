@@ -44,11 +44,11 @@ export const sdel: TExperience = {
         "Formation des développeurs",
       ],
       results: [
-        "Accès simplifié à l'application via un navigateur, sans installation requise, depuis le réseau local.",
-        "Sécurisation de l'application par un système d'authentification et d'autorisation basé sur des rôles.",
-        "Amélioration de l'éxpérience utilisateur grâce à un système de cache, un volet de navigation, un design modernisé et une compatibilité responsive tous écrans.",
-        "Standardisation de la documentation de l'API selon la norme OpenAPI, facilitant l'intégration avec d'autres systèmes.",
-        "Retour positif de l'équipe concernant l'expérience de développement par rapport à l'ancienne application.",
+        "Accès simplifié à l'application via un navigateur, sans installation requise, depuis le réseau local",
+        "Sécurisation de l'application par un système d'authentification et d'autorisation basé sur des rôles",
+        "Amélioration de l'éxpérience utilisateur grâce à un système de cache, un volet de navigation, un design modernisé et une compatibilité responsive tous écrans",
+        "Standardisation de la documentation de l'API selon la norme OpenAPI, facilitant l'intégration avec d'autres systèmes",
+        "Retour positif de l'équipe concernant l'expérience de développement par rapport à l'ancienne application",
       ],
       skills: [
         "Gestion de projet",
@@ -100,12 +100,13 @@ export const sdel: TExperience = {
         "Documentation technique",
       ],
       results: [
-        "Mise en place d'une plateforme de génération d'OS moderne et maintenable avec Yocto Project.",
-        "Controle total de la chaîne de génération, de la compilation à l'intégration des composants logiciels.",
-        "Amélioration du suivi des versions et de la traçabilité des modifications.",
-        "Suivi des failles de sécurité.",
-        "Gestion simplifiée des dépendances et des mises à jour.",
-        "Réduction du temps de génération des images Linux.",
+        "Mise en place d'une plateforme de génération d'OS moderne et maintenable avec Yocto Project",
+        "Réduction des efforts de maintenance",
+        // "Controle total de la chaîne de génération, de la compilation à l'intégration des composants logiciels",
+        // "Partitionnement A/B"
+        "Amélioration du suivi des versions et de la traçabilité des modifications",
+        "Suivi des failles de sécurité",
+        "Simplification du processus de déploiement et de mise à jour",
       ],
       skills: ["Administration système Linux", "Outils de build"],
       technologies: [
