@@ -1,7 +1,7 @@
 import { displayInterval } from "@/lib/utils";
 import { meta } from "@/data";
-import { Section } from "./section";
-import { Institution } from "./institution";
+import { Section } from "../section";
+import { Institution } from "../institution";
 
 export function Experience() {
   return (
@@ -23,7 +23,7 @@ export function Experience() {
             </div>
             <ul className="list-disc list-inside">
               {e.tasks.map((t) => (
-                <li key={t}>{t}</li>
+                <li key={t.title}>{t.title}</li>
               ))}
             </ul>
             <div>Technologies : {e.technologies.join(", ")}</div>

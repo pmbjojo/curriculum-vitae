@@ -4,6 +4,7 @@ import {
   Calendar,
   ExternalLink,
   GitBranch,
+  GitFork,
   MapPin,
 } from "lucide-react";
 import { TAddress } from "@/schemas";
@@ -20,6 +21,7 @@ export function TimelineCard({
   website,
   children,
   index,
+  department,
 }: {
   title: string;
   organization: { name: string; url?: string };
@@ -28,6 +30,7 @@ export function TimelineCard({
   children: ReactNode;
   website?: string;
   repository?: string;
+  department?: string;
   index: number;
 }) {
   return (
@@ -58,6 +61,7 @@ export function TimelineCard({
           address={address}
           repository={repository}
           website={website}
+          department={department}
         />
 
         <div className="text-muted-foreground">{children}</div>
@@ -73,6 +77,7 @@ export function Header({
   title,
   repository,
   website,
+  department,
 }: {
   title: string;
   organization: { name: string; url?: string };
@@ -80,6 +85,7 @@ export function Header({
   period: string;
   website?: string;
   repository?: string;
+  department?: string;
 }) {
   return (
     <div className="flex justify-between">
@@ -97,6 +103,12 @@ export function Header({
             )}
           </div>
 
+          {department && (
+            <div className="flex items-center gap-1">
+              <GitFork className="size-4" />
+              <span>Service {department}</span>
+            </div>
+          )}
           {address && (
             <div className="flex items-center gap-1">
               <MapPin className="size-4" />

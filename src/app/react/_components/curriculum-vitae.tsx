@@ -1,12 +1,13 @@
 import { A4 } from "./a4";
-import { Header } from "./header";
-import { Summary } from "./summary";
-import { Experience } from "./experience";
-import { Education } from "./education";
-import { Skills } from "./skills";
-import { Projects } from "./projects";
-import { Languages } from "./languages";
-import { References } from "./references";
+import { Header } from "./sections/header";
+import { Summary } from "./sections/summary";
+import { Experience } from "./sections/experience";
+import { Education } from "./sections/education";
+import { Skills } from "./sections/skills";
+import { Projects } from "./sections/projects";
+import { Languages } from "./sections/languages";
+import { References } from "./sections/references";
+import { Hobbies } from "./sections/hobbies";
 
 export function CurriculumVitae() {
   const accentColor = "black";
@@ -23,7 +24,8 @@ export function CurriculumVitae() {
         </div>
         <div className="flex gap-3">
           <Languages />
-          <References className="grow" />
+          <References />
+          <Hobbies />
         </div>
       </div>
     </A4>

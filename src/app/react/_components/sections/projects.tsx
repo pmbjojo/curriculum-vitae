@@ -1,5 +1,5 @@
 import { meta } from "@/data";
-import { Section } from "./section";
+import { Section } from "../section";
 
 export function Projects({ className }: { className?: string }) {
   return (

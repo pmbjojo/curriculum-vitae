@@ -1,7 +1,7 @@
 import { meta } from "@/data";
-import { Section } from "./section";
+import { Section } from "../section";
 import { displayInterval } from "@/lib/utils";
-import { Institution } from "./institution";
+import { Institution } from "../institution";
 
 export function Education() {
   return (
