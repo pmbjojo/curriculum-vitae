@@ -57,6 +57,7 @@ export const kropman: TExperience = {
         "SharePoint",
         "Bootstrap",
         "CSS",
+        "SAAS",
         "Microsoft Graph API",
         "SQL Server",
         "Azure DevOps",
