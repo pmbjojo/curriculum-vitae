@@ -11,6 +11,7 @@ import { TAddress } from "@/schemas";
 import { MapLink } from "./map-link";
 import { LinkButton } from "./link-button";
 import { ReactNode } from "react";
+import { Anchor } from "./anchor";
 
 export function TimelineCard({
   title,
@@ -63,7 +64,6 @@ export function TimelineCard({
           website={website}
           department={department}
         />
-
         <div className="text-muted-foreground">{children}</div>
       </motion.div>
     </motion.div>
@@ -90,7 +90,9 @@ export function Header({
   return (
     <div className="flex justify-between">
       <div className="mb-3">
-        <h4 className="text-xl font-bold">{title}</h4>
+        <Anchor id={title} className="text-xl font-bold" level="h4">
+          {title}
+        </Anchor>
         <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 text-muted-foreground">
           <div className="flex items-center gap-1">
             <Building className="h-4 w-4" />
@@ -102,20 +104,21 @@ export function Header({
               <span>{organization.name}</span>
             )}
           </div>
-
+          {address && (
+            <div className="flex items-center gap-1">
+              <MapPin className="size-4" />
+              <MapLink address={address}>
+                {address?.city}
+                {address?.country !== "France" && `, ${address?.country}`}
+              </MapLink>
+            </div>
+          )}
           {department && (
             <div className="flex items-center gap-1">
               <GitFork className="size-4" />
               <span>Service {department}</span>
             </div>
           )}
-          {address && (
-            <div className="flex items-center gap-1">
-              <MapPin className="size-4" />
-              <MapLink address={address}>{address?.city}</MapLink>
-            </div>
-          )}
-
           <div className="flex items-center gap-1">
             <Calendar className="size-4" />
             <span>{period}</span>

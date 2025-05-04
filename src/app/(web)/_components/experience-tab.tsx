@@ -36,7 +36,7 @@ export default function ExperienceTab() {
             {e.methodologies.length > 0 && (
               <div>Méthodologies : {e.methodologies.join(", ")}</div>
             )}
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="multiple">
               {e.tasks.map((t) => (
                 <AccordionItem value={t.title} key={t.title}>
                   <AccordionTrigger className="font-bold">
@@ -64,7 +64,7 @@ export default function ExperienceTab() {
                           </TableCell>
                         </TableRow>
                         <TableRow>
-                          <TableHead>Resultats</TableHead>
+                          <TableHead>Résultats</TableHead>
                           <TableCell className="whitespace-normal break-words">
                             <ul className="list-disc list-inside">
                               {t.results.map((r) => (

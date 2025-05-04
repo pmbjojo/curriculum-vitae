@@ -18,7 +18,7 @@ export const sdel: TExperience = {
     end: new Date("2024-08-31"),
   },
   description:
-    "Au sein de l'équipe de développement logiciel du service R&D, j'ai principalement été chargé d'introduire de nouvelles technologies et de moderniser les composants logiciels existants. Mon travail s'est inscrit dans un contexte industriel exigeant, lié aux systèmes de contrôle et de supervision utilisés dans le secteur de l'énergie. Cette expérience m'a permis monter en autonomie et de développer des compétences en développement web, en programmation embarquée ainsi qu'en rigueur dans un environnement normé.",
+    "Au sein de l'équipe de développement logiciel du service R&D, j'ai principalement été chargé d'introduire de nouvelles technologies et de moderniser les composants logiciels existants. Mon travail s'est inscrit dans un contexte industriel exigeant, lié aux systèmes de contrôle et de supervision utilisés dans le secteur de l'énergie. Cette expérience m'a permis de monter en autonomie et de développer des compétences en développement web, en programmation embarquée ainsi qu'en rigueur dans un environnement normé.",
   tasks: [
     {
       title:
@@ -35,8 +35,7 @@ export const sdel: TExperience = {
       goal: "Remplacer une application de bureau vieillissante et non sécurisée par une application web embarquée intuitive et performante pour la configuration d'automates programmables industriels.",
       roles: [
         "Chef de projet",
-        "Conception logicielle",
-        "Développement front-end",
+        "Conception et développement front-end",
         "Développement API REST",
         "Intégration système",
         "Tests de composants",
@@ -46,7 +45,7 @@ export const sdel: TExperience = {
       results: [
         "Accès simplifié à l'application via un navigateur, sans installation requise, depuis le réseau local",
         "Sécurisation de l'application par un système d'authentification et d'autorisation basé sur des rôles",
-        "Amélioration de l'éxpérience utilisateur grâce à un système de cache, un volet de navigation, un design modernisé et une compatibilité responsive tous écrans",
+        "Amélioration de l'expérience utilisateur grâce à un système de cache, un volet de navigation, un design modernisé et une compatibilité responsive tous écrans",
         "Standardisation de la documentation de l'API selon la norme OpenAPI, facilitant l'intégration avec d'autres systèmes",
         "Retour positif de l'équipe concernant l'expérience de développement par rapport à l'ancienne application",
       ],
@@ -86,13 +85,13 @@ export const sdel: TExperience = {
       description: `La plateforme permet de générer des images Linux personnalisées pour des équipements embarqués.
           Elle comprend les éléments suivants :
           - Base de la distribution commune
-          - Personnalisations spécifique à chaque équipement
+          - Personnalisation spécifique à chaque équipement
           - Recettes de construction des logiciels internes
           - Gestion des dépendances
           - Gestion des mises à jour`,
       goal: "Remplacer le système de génération de de systèmes d'exploitation historique par un système moderne en assurant la compatibilité avec le matériel et les exigences de sécurité et de maintenabilité à long terme.",
       roles: [
-        "Experimentation des outils de génération d'OS",
+        "Expérimentation des outils de génération d'OS",
         "Conception de l'architecture de la plateforme",
         "Sélection et intégration des composants logiciels",
         "Développement des recettes de génération",

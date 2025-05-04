@@ -18,11 +18,11 @@ export const kropman: TExperience = {
     end: new Date("2024-08-31"),
   },
   description:
-    "Dans une équipe de développement interne, j'ai contribué à la création et à l'amélioration d'applications métiers utilisées par les collaborateurs. Ce stage m'a non seulement permis d'approfondir mes compétences en développement d'applications fullstack en découvrant le framework .NET, mais aussi de pratiquer et améliorer mon anglais dans un environnement de travail international.",
+    "Dans une équipe de développement interne, j'ai contribué à la création et à l'amélioration d'applications métiers utilisées par les collaborateurs. Ce stage m'a non seulement permis d'approfondir mes compétences en développement d'applications fullstack en découvrant le framework .NET, mais aussi de pratiquer et d'améliorer mon anglais dans un environnement de travail international.",
   tasks: [
     {
       title:
-        "Développement d'une application de gestion et du suivi de la diffusion de documents",
+        "Développement d'une application de gestion et de suivi de la diffusion de documents",
       description: `L'application inclut des fonctionnalités telles que : 
         - Gestion des documents (téléchargement, suppression, modification)
         - Versioning des documents
@@ -40,7 +40,7 @@ export const kropman: TExperience = {
         "Déploiement de l'application",
       ],
       results: [
-        "Expérimentation l'application par le service RH lors de mon départ",
+        "Expérimentation de l'application par le service RH lors de mon départ",
         "Intégration de l'application avec SharePoint pour le stockage des documents",
         "Utilisation de formulaires pas à pas pour guider les utilisateurs et simplifier la validation",
       ],
@@ -87,7 +87,7 @@ export const kropman: TExperience = {
         "Mise en production de l'application dans un environnement de test",
         "Amélioration de la structure de la base de données",
         "Conservation des données existantes",
-        "Refonte de l'interface utilisateur basé sur material design",
+        "Refonte de l'interface utilisateur basée sur material design",
       ],
       skills: [],
       technologies: [

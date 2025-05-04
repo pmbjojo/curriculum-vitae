@@ -3,7 +3,15 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { Button } from "../../../components/ui/button";
-import { ChevronRight, Download, FileText, Mail } from "lucide-react";
+import {
+  Briefcase,
+  ChevronRight,
+  Download,
+  FileText,
+  GraduationCap,
+  Mail,
+  MapPin,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { meta } from "@/data";
@@ -130,13 +138,13 @@ export function Hero({ scrollTo }: { scrollTo: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <HighlightCard title="Expérience">
+          <HighlightCard title="Expérience" Icon={Briefcase}>
             {meta.highlights.experience}
           </HighlightCard>
-          <HighlightCard title="Formation">
+          <HighlightCard title="Formation" Icon={GraduationCap}>
             {meta.highlights.education}
           </HighlightCard>
-          <HighlightCard title="Localisation">
+          <HighlightCard title="Localisation" Icon={MapPin}>
             {meta.highlights.localisation}
           </HighlightCard>
         </motion.div>

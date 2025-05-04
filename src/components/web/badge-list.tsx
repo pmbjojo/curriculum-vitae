@@ -16,11 +16,9 @@ export function BadgeList({
     [items, max, showMore]
   );
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1">
       {displayedItems.map((item) => (
-        <Badge key={item} className="text-sm">
-          {item}
-        </Badge>
+        <Badge key={item}>{item}</Badge>
       ))}
       {items.length > max && (
         <Badge

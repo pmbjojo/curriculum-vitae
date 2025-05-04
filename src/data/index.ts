@@ -44,7 +44,7 @@ export const cv: TCV = {
   education,
   languages,
   summary:
-    "Ingénieur diplômé de l'ESEO Angers avec 3 ans d'expérience en apprentissage dans la R&D chez SDEL Contrôle Commande (VINCI Energies). Expérience en développement full stack, spécialisé en React et .NET.",
+    "Ingénieur diplômé de l'ESEO Angers avec 3 ans d'expérience en apprentissage dans la R&D chez SDEL Contrôle Commande, entreprise de VINCI Energies. Expérience en développement full stack, spécialisé en React et .NET.",
   // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département Recherche et Développement de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement logiciel.",
   // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département R&D de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement web full stack.",
   hobbies: [

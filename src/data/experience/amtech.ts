@@ -2,7 +2,7 @@ import { TExperience } from "@/schemas";
 
 export const amtech: TExperience = {
   title: "Développeur logiciel",
-  department: "Développement",
+  department: "Instrumentation",
   contract: "Stage",
   website: "https://amtech-ingenierie.fr/",
   address: {
@@ -18,7 +18,7 @@ export const amtech: TExperience = {
     end: new Date("2021-05-31"),
   },
   description:
-    "J'ai travaillé sur le développement d'un système embarqué destiné à l'inspection d'environnements contrôlés dans le secteur nucléaire. Mon travail a consisté à concevoir et programmer une caméra d'inspection intégrant des protocoles de communication spécifiques pour interagir avec des équipements industriels. Ce projet m'a apporté une expérience précieuse dans le domaine des systèmes embarqués et de la communication entre machines.",
+    "J'ai travaillé sur le développement d'un système embarqué destiné à l'inspection d'environnements contrôlés dans le secteur nucléaire. Mon travail consistait à concevoir et programmer une caméra d'inspection intégrant des protocoles de communication spécifiques pour interagir avec des équipements industriels. Ce projet m'a apporté une expérience précieuse dans le domaine des systèmes embarqués et de la communication entre machines.",
   tasks: [
     {
       title:
@@ -30,13 +30,13 @@ export const amtech: TExperience = {
         "Rétro-ingénierie des protocoles de communication de la caméra",
         "Développement de l'API de contrôle de la caméra",
         "Développement du serveur de streaming vidéo",
-        "Intégration dans un boitier de commande avec écran et joystick",
+        "Intégration dans un boîtier de commande avec écran et joystick",
       ],
       results: [
         "Transmission vidéo en temps réel via un serveur web",
         "Contrôle de la caméra via un joystick",
         "Assemblage de la caméra dans un tuyau au dimensions spécifiques",
-        "Réalisation d'un boitier de commande déporté",
+        "Réalisation d'un boîtier de commande déporté",
       ],
       skills: [
         "Systèmes linux embarqués",
