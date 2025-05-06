@@ -8,13 +8,13 @@ import Link from "next/link";
 export function Tools() {
   return (
     <div className="fixed flex gap-3 bottom-5 right-5 print:hidden flex-col sm:flex-row">
-      <Button asChild variant="outline" className="size-9 sm:size-auto">
+      <Button asChild className="size-9 sm:size-auto">
         <Link href={`/${fileName}`}>
           <Printer />
           <span className="hidden sm:block">Imprimer</span>
         </Link>
       </Button>
-      <Button asChild className="size-9 sm:size-auto" variant="outline">
+      <Button asChild className="size-9 sm:size-auto">
         <a href={`/${fileName}`} download>
           <Download />
           <span className="hidden sm:block">Télécharger</span>

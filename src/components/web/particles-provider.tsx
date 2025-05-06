@@ -21,7 +21,7 @@ export function ParticlesProvider() {
     });
   }, []);
 
-  const color = resolvedTheme == "dark" ? "#ffffff" : "#000000";
+  const color = resolvedTheme === "dark" ? "#ffe0c2" : "#644a40";
 
   const options: ISourceOptions = useMemo(
     () => ({

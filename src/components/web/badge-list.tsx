@@ -22,6 +22,7 @@ export function BadgeList({
       ))}
       {items.length > max && (
         <Badge
+          className="cursor-pointer"
           variant="outline"
           onClick={() => {
             setShowMore(!showMore);

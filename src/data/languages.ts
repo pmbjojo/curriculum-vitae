@@ -1,4 +1,4 @@
-import { TLanguage } from "@/schemas";
+import { TLanguage } from "@/schemas/language";
 
 export const languages: TLanguage[] = [
   {

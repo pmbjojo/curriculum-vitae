@@ -1,4 +1,4 @@
-import { SAddress } from "@/schemas";
+import { SAddress } from "@/schemas/utils";
 import { z } from "zod";
 import { LinkButton } from "./link-button";
 import { ReactNode } from "react";

@@ -1,4 +1,4 @@
-import { TReference } from "@/schemas";
+import { TReference } from "@/schemas/reference";
 
 export const references: TReference[] = [
   {

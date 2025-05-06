@@ -10,8 +10,8 @@ export function LinkButton({
   children: ReactNode;
 }) {
   return (
-    <Button asChild variant="link" className="text-inherit px-0 p-0">
-      <Link href={href} target="_blank">
+    <Button asChild variant="link" className="text-inherit p-0 h-auto">
+      <Link href={href} target="_blank" rel="noopener noreferrer">
         {children}
       </Link>
     </Button>

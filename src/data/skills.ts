@@ -1,4 +1,4 @@
-import { TSkill } from "@/schemas";
+import { TSkill } from "@/schemas/skill";
 
 export const skills: TSkill[] = [
   {

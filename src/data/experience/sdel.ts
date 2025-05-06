@@ -1,4 +1,4 @@
-import { TExperience } from "@/schemas";
+import { TExperience } from "@/schemas/experience";
 
 export const sdel: TExperience = {
   title: "Développeur logiciel",

@@ -1,9 +1,9 @@
-import { TExperience } from "@/schemas";
+import { TExperience } from "@/schemas/experience";
 
 export const kropman: TExperience = {
   title: "Développeur Full Stack",
   department: "Développement et Innovation",
-  contract: "Stage",
+  contract: "Stage international",
   website: "https://kropman.nl/",
   address: {
     institution: "Kropman",

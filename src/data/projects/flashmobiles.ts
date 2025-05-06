@@ -1,4 +1,4 @@
-import { TProject } from "@/schemas";
+import { TProject } from "@/schemas/project";
 
 export const flashmobiles: TProject = {
   title: "Flashmobiles",

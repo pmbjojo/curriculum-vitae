@@ -1,4 +1,4 @@
-import { TEducation } from "@/schemas";
+import { TEducation } from "@/schemas/education";
 
 export const eseo: TEducation = {
   degree: "Diplôme d'Ingénieur Informatique en Apprentissage",

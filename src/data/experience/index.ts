@@ -1,4 +1,4 @@
-import { TExperience } from "@/schemas";
+import { TExperience } from "@/schemas/experience";
 import { sdel } from "./sdel";
 import { kropman } from "./kropman";
 import { amtech } from "./amtech";

@@ -1,5 +1,5 @@
 import { meta } from "@/data";
-import { SDates } from "@/schemas";
+import { SDates } from "@/schemas/utils";
 import { clsx, type ClassValue } from "clsx";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { fr } from "date-fns/locale";
