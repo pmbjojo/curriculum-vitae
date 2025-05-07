@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Joshua Jourdam - Curriculum Vitae",
+  url: "https://joshua-jourdam.vercel.app/",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,6 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-FR" suppressHydrationWarning>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased h-dvh flex flex-col`}
       >
