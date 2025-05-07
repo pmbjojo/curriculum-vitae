@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function PdfPage() {
   return (
-    <>
+    <div className="bg-accent flex">
       <Tools />
       <CurriculumVitae />
-    </>
+    </div>
   );
 }
