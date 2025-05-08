@@ -21,14 +21,12 @@ export function ParticlesProvider() {
     });
   }, []);
 
-  const color = resolvedTheme === "dark" ? "#ffe0c2" : "#644a40";
-
   const options: ISourceOptions = useMemo(
     () => ({
       fpsLimit: 120,
       particles: {
         color: {
-          value: color,
+          value: resolvedTheme === "dark" ? "#ffe0c2" : "#644a40",
         },
         move: {
           direction: MoveDirection.none,
@@ -58,7 +56,7 @@ export function ParticlesProvider() {
       },
       detectRetina: true,
     }),
-    [color]
+    [resolvedTheme]
   );
 
   if (init) {
