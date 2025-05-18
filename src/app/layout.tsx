@@ -6,6 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { ParticlesProvider } from "@/components/web/particles-provider";
 import { geistMono, geistSans, roboto } from "@/styles/fonts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { env } from "@/lib/env";
+import Script from "next/script";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -24,6 +26,7 @@ export const metadata: Metadata = {
   verification: {
     google: "boQz2krzQsDPRsQAT6j0Cv1xcoa7hfKxaBijDGcBjWY",
   },
+  metadataBase: new URL(env.BASE_URL),
 };
 
 const jsonLd = {
@@ -40,10 +43,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-FR" suppressHydrationWarning>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script
+          crossOrigin="anonymous"
+          src="//unpkg.com/react-scan/dist/auto.global.js"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased h-dvh flex flex-col`}
       >
