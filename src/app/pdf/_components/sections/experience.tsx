@@ -16,10 +16,7 @@ export function Experience() {
                 </h3>
                 <div>{displayInterval(e.dates)}</div>
               </div>
-              <Institution
-                institution={e.address.institution}
-                city={e.address.city}
-              />
+              <Institution address={e.address} />
             </div>
             <ul className="list-disc list-inside">
               {e.tasks.map((t) => (

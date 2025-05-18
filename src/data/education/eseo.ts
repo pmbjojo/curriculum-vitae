@@ -34,7 +34,7 @@ export const eseo: TEducation = {
         "Acquisition des fondamentaux en électronique, génie électrique, automatique, traitement du signal, mathématiques, informatique, anglais, communication et gestion de projet.",
     },
     {
-      category: "Approfondissement (Semestres 4 et 5)",
+      category: "Spécialisation (Semestres 4 et 5)",
       description:
         "Spécialisation dans l'informatique et les systèmes d'information et la cybersécurité",
     },

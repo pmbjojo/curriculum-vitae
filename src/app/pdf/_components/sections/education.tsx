@@ -16,10 +16,7 @@ export function Education() {
               </div>
               <div>{displayInterval(e.dates, "yyyy")}</div>
             </div>
-            <Institution
-              institution={e.address.institution}
-              city={e.address.city}
-            />
+            <Institution address={e.address} />
           </div>
         ))}
       </div>
