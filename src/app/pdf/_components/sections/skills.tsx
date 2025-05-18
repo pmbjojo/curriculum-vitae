@@ -4,12 +4,14 @@ import { Section } from "../section";
 export function Skills() {
   return (
     <Section title="Compétences">
-      {meta.skills.map((s) => (
-        <div key={s.domain} className="pr-5">
-          <h3 className="font-bold">{s.domain}</h3>
-          <ul className="list-disc list-inside">{s.items.join(", ")}</ul>
-        </div>
-      ))}
+      <ul className="pr-5">
+        {meta.skills.map((s) => (
+          <li key={s.domain}>
+            <h3 className="font-bold">{s.domain}</h3>
+            <div>{s.items.join(", ")}</div>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }

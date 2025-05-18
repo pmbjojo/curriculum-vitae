@@ -6,9 +6,9 @@ import { Institution } from "../institution";
 export function Experience() {
   return (
     <Section title="Expérience">
-      <div className="flex flex-col gap-1">
+      <ul className="flex flex-col gap-1">
         {meta.experience.map((e) => (
-          <div key={e.website}>
+          <li key={e.website}>
             <div>
               <div className="flex justify-between items-center">
                 <h3 className="font-bold text-sm">
@@ -24,9 +24,9 @@ export function Experience() {
               ))}
             </ul>
             <div>Technologies : {e.technologies.join(", ")}</div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Section>
   );
 }

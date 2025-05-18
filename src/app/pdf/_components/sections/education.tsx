@@ -6,9 +6,9 @@ import { Institution } from "../institution";
 export function Education() {
   return (
     <Section title="Formation">
-      <div className="flex flex-col gap-1">
+      <ul className="flex flex-col gap-1">
         {meta.education.map((e) => (
-          <div key={e.address.institution}>
+          <li key={e.address.institution}>
             <div className="flex justify-between items-center">
               <div className="font-bold text-sm">
                 {e.degree}
@@ -17,9 +17,9 @@ export function Education() {
               <div>{displayInterval(e.dates, "yyyy")}</div>
             </div>
             <Institution address={e.address} />
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Section>
   );
 }
