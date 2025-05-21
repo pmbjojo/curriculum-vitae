@@ -6,13 +6,7 @@ import { SAddress } from "./utils";
 import { SSkill } from "./skill";
 import { SLanguage } from "./language";
 import { SReference } from "./reference";
-
-export const SSocial = z.object({
-  name: z.string(),
-  link: z.string(),
-  icon: z.any().optional(),
-});
-export type TSocial = z.infer<typeof SSocial>;
+import { SSocial } from "./social";
 
 export const SCV = z.object({
   title: z.string(),

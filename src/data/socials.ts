@@ -1,15 +1,12 @@
-import { TSocial } from "@/schemas";
-import { Github, Linkedin } from "lucide-react";
+import { TSocial } from "@/schemas/social";
 
 export const socials: TSocial[] = [
   {
     link: "https://github.com/pmbjojo",
     name: "GitHub",
-    icon: Github,
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/joshua-jourdam-7617b3196",
-    icon: Linkedin,
   },
 ];

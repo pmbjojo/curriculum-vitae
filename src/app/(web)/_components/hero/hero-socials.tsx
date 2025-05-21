@@ -11,7 +11,7 @@ export function HeroSocials() {
       transition={{ duration: 0.5, delay: 0.4 }}
     >
       {meta.socials.map((s) => (
-        <SocialLink key={s.name} name={s.name} link={s.link} Icon={s.icon} />
+        <SocialLink key={s.name} name={s.name} link={s.link} />
       ))}
     </motion.div>
   );

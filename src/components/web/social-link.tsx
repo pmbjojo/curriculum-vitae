@@ -1,21 +1,14 @@
 import Link from "next/link";
-import { ElementType } from "react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { SocialIcon, TSocial } from "@/schemas/social";
 
-export function SocialLink({
-  name,
-  link,
-  Icon,
-}: {
-  name: string;
-  link: string;
-  Icon: ElementType;
-}) {
+export function SocialLink({ name, link }: TSocial) {
+  const Icon = SocialIcon[name];
   return (
     <TooltipProvider>
       <Tooltip>
