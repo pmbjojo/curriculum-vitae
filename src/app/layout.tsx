@@ -54,7 +54,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased h-dvh flex flex-col overflow-x-scroll`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} flex h-dvh flex-col antialiased`}
       >
         <ThemeProvider
           attribute="class"
