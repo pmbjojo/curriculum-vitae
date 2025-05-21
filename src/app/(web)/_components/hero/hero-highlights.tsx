@@ -1,5 +1,5 @@
 import { HighlightCard } from "@/components/web/highlight-card";
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { motion } from "motion/react";
 import { Briefcase, GraduationCap, MapPin } from "lucide-react";
 
@@ -12,13 +12,13 @@ export function HeroHighlights() {
       transition={{ duration: 0.5, delay: 0.5 }}
     >
       <HighlightCard title="Expérience" Icon={Briefcase}>
-        {meta.highlights.experience}
+        {resume.highlights.experience}
       </HighlightCard>
       <HighlightCard title="Formation" Icon={GraduationCap}>
-        {meta.highlights.education}
+        {resume.highlights.education}
       </HighlightCard>
       <HighlightCard title="Localisation" Icon={MapPin}>
-        {meta.highlights.localisation}
+        {resume.highlights.localisation}
       </HighlightCard>
     </motion.div>
   );

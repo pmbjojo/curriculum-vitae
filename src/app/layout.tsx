@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/web/theme-provider";
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { Analytics } from "@vercel/analytics/react";
 import { ParticlesProvider } from "@/components/web/particles-provider";
 import { geistMono, geistSans, roboto } from "@/styles/fonts";
@@ -16,11 +16,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: `${meta.firstName} ${meta.lastName}`,
-  description: `Curriculum Vitae de ${meta.firstName} ${meta.lastName}`,
+  title: `${resume.firstName} ${resume.lastName}`,
+  description: `Curriculum Vitae de ${resume.firstName} ${resume.lastName}`,
   authors: [
     {
-      name: `${meta.firstName} ${meta.lastName}`,
+      name: `${resume.firstName} ${resume.lastName}`,
     },
   ],
   verification: {
@@ -54,7 +54,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased h-dvh flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased h-dvh flex flex-col overflow-x-scroll`}
       >
         <ThemeProvider
           attribute="class"

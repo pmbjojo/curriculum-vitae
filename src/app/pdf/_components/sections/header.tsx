@@ -1,4 +1,4 @@
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { differenceInYears } from "date-fns";
 import { Mail, Phone, Linkedin, Car, Globe } from "lucide-react";
 import Image from "next/image";
@@ -38,7 +38,7 @@ export function Header({ color }: { color?: string }) {
         />
         <PersonalDetails />
       </div>
-      <div className="text-3xl font-bold">{meta.title}</div>
+      <div className="text-3xl font-bold">{resume.title}</div>
       <Informations />
     </div>
   );
@@ -48,38 +48,38 @@ function PersonalDetails() {
   return (
     <div className="flex flex-col">
       <span className="text-[1.5rem] font-bold ligne leading-tight">
-        {meta.firstName}
+        {resume.firstName}
       </span>
-      <span className="text-[1.25rem] leading-tight">{meta.lastName}</span>
+      <span className="text-[1.25rem] leading-tight">{resume.lastName}</span>
       <span className="text-[0.825rem] font-light leading-tight">
-        {differenceInYears(new Date(), new Date(meta.birthday))} ans
+        {differenceInYears(new Date(), new Date(resume.birthday))} ans
       </span>
     </div>
   );
 }
 
 function Informations() {
-  const linkedin = meta.socials.find((s) => s.name === "LinkedIn");
+  const linkedin = resume.socials.find((s) => s.name === "LinkedIn");
   return (
     <div className="flex flex-col items-end gap-0.5">
       <Meta Icon={Mail}>
-        <Link href={`mailto:${meta.email}`}>{meta.email}</Link>
+        <Link href={`mailto:${resume.email}`}>{resume.email}</Link>
       </Meta>
       <Meta Icon={Phone}>
-        <Link href={`tel:${meta.phone}`}>{meta.phone}</Link>
+        <Link href={`tel:${resume.phone}`}>{resume.phone}</Link>
       </Meta>
       {linkedin && (
         <Meta Icon={Linkedin}>
           <Link href={linkedin.link}>{linkedin.name}</Link>
         </Meta>
       )}
-      {meta.website && (
+      {resume.website && (
         <Meta Icon={Globe}>
-          <Link href={meta.website}>Site web</Link>
+          <Link href={resume.website}>Site web</Link>
         </Meta>
       )}
-      {meta.drivingLicense && (
-        <Meta Icon={Car}>Permis {meta.drivingLicense}</Meta>
+      {resume.drivingLicense && (
+        <Meta Icon={Car}>Permis {resume.drivingLicense}</Meta>
       )}
       {/* <Meta Icon={Home} className="hidden print:flex text-right items-start">
         {meta.address.street}

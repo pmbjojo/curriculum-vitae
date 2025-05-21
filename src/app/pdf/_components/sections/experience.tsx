@@ -1,5 +1,5 @@
 import { displayInterval } from "@/lib/utils";
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { Section } from "../section";
 import { Institution } from "../institution";
 
@@ -7,7 +7,7 @@ export function Experience() {
   return (
     <Section title="Expérience">
       <ul className="flex flex-col gap-1">
-        {meta.experience.map((e) => (
+        {resume.experience.map((e) => (
           <li key={e.website}>
             <div>
               <div className="flex justify-between items-center">

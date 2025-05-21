@@ -1,10 +1,10 @@
 import { CurriculumVitae } from "./_components/curriculum-vitae";
 import { Metadata } from "next";
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { Tools } from "./_components/tools";
 
 export const metadata: Metadata = {
-  title: `${meta.firstName} ${meta.lastName} - PDF`,
+  title: `${resume.firstName} ${resume.lastName} - PDF`,
 };
 
 export default function PdfPage() {

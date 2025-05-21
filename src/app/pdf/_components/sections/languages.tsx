@@ -1,4 +1,4 @@
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { Section } from "../section";
 
 export function Languages() {
@@ -6,7 +6,7 @@ export function Languages() {
     <Section title="Langues">
       <table>
         <tbody>
-          {meta.languages.map((l) => (
+          {resume.languages.map((l) => (
             <tr key={l.name}>
               <td className="font-bold pr-3">{l.name}</td>
               <td>{l.level}</td>

@@ -15,12 +15,12 @@ import {
   Title,
   WebSite,
 } from "@/components/web/timeline";
-import { meta } from "@/data";
+import { resume } from "@/data";
 
 export default function ProjectsTab() {
   return (
     <Timeline>
-      {meta.projects.map((p, i) => (
+      {resume.projects.map((p, i) => (
         <TimelineCard index={i} key={p.title}>
           <Header>
             <HeaderTop>

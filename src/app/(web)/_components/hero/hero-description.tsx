@@ -1,4 +1,4 @@
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { motion } from "motion/react";
 
 export function HeroDescription() {
@@ -10,7 +10,7 @@ export function HeroDescription() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {meta.firstName} {meta.lastName}
+        {resume.firstName} {resume.lastName}
       </motion.h1>
       <motion.h2
         className="text-xl font-medium text-muted-foreground md:text-2xl"
@@ -18,7 +18,7 @@ export function HeroDescription() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        {meta.title}
+        {resume.title}
       </motion.h2>
       <motion.p
         className="max-w-[600px] text-muted-foreground md:text-xl"
@@ -26,7 +26,7 @@ export function HeroDescription() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {meta.summary}
+        {resume.summary}
       </motion.p>
     </div>
   );
