@@ -5,13 +5,16 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
-import { meta } from "@/data";
-import { Skill, SkillMeta, SoftSkill, SoftSkillMeta } from "@/schemas/skill";
+import { resume } from "@/data";
+import { Skill, SkillMeta, SoftSkillMeta } from "@/schemas/skill";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export const skills: Skill[] = [
   "React",
@@ -31,7 +34,7 @@ export default function SkillsSection() {
   return (
     <section className="flex flex-col items-center gap-10">
       <Carousel
-        className="container"
+        className="container px-4"
         opts={{
           loop: true,
         }}
@@ -66,21 +69,22 @@ export default function SkillsSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
       </Carousel>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 h-full">
-        {meta.skills
-          .find((s) => s.domain === "Comportementales")
-          ?.items.map((i) => {
-            const Icon = SoftSkillMeta[i as SoftSkill].icon;
-            return (
-              <Card key={i} className="flex-row p-3">
-                <Icon />
-                <span>{i}</span>
-              </Card>
-            );
-          })}
+        {resume.softSkills.map((s) => {
+          const Icon = SoftSkillMeta[s.name].icon;
+          return (
+            <Popover key={s.name}>
+              <PopoverTrigger>
+                <Card className="flex-row p-3 cursor-pointer">
+                  <Icon />
+                  <span>{s.name}</span>
+                </Card>
+              </PopoverTrigger>
+              <PopoverContent>{s.description}</PopoverContent>
+            </Popover>
+          );
+        })}
       </div>
     </section>
   );

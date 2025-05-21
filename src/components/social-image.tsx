@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { ImageResponse } from "next/og";
-import { meta } from "@/data";
+import { resume } from "@/data";
 
 export const alt = "Curriculum Vitae";
 export const size = {
@@ -73,7 +73,7 @@ export default function Image() {
                 lineHeight: 1.1,
               }}
             >
-              {meta.firstName} {meta.lastName}
+              {resume.firstName} {resume.lastName}
             </h1>
             <h2
               style={{
@@ -83,7 +83,7 @@ export default function Image() {
                 marginTop: 8,
               }}
             >
-              {meta.title}
+              {resume.title}
             </h2>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function Image() {
               margin: 0,
             }}
           >
-            {meta.summary}
+            {resume.summary}
           </p>
         </div>
       </div>

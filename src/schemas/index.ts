@@ -3,18 +3,12 @@ import { SProject } from "./project";
 import { SExperience } from "./experience";
 import { SEducation } from "./education";
 import { SAddress } from "./utils";
-import { SSkill } from "./skill";
+import { SSkill, SSoftSkill } from "./skill";
 import { SLanguage } from "./language";
 import { SReference } from "./reference";
+import { SSocial } from "./social";
 
-export const SSocial = z.object({
-  name: z.string(),
-  link: z.string(),
-  icon: z.any().optional(),
-});
-export type TSocial = z.infer<typeof SSocial>;
-
-export const SCV = z.object({
+export const SResume = z.object({
   title: z.string(),
   website: z.url(),
   firstName: z.string(),
@@ -28,6 +22,7 @@ export const SCV = z.object({
   summary: z.string(),
   keywords: z.array(z.string()),
   skills: z.array(SSkill),
+  softSkills: z.array(SSoftSkill),
   highlights: z.object({
     experience: z.string(),
     education: z.string(),
@@ -40,4 +35,4 @@ export const SCV = z.object({
   hobbies: z.array(z.string()),
   references: z.array(SReference),
 });
-export type TCV = z.infer<typeof SCV>;
+export type TResume = z.infer<typeof SResume>;

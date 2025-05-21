@@ -48,7 +48,7 @@ export default function Home({ children }: { children: ReactNode }) {
               Formation
             </TabButton>
             <TabButton href="/projects">
-              <FolderGit2 className="ssize-4" />
+              <FolderGit2 className="size-4" />
               Projets
             </TabButton>
           </motion.div>

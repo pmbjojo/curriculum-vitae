@@ -1,5 +1,5 @@
 import { displayInterval } from "@/lib/utils";
-import { meta } from "@/data";
+import { resume } from "@/data";
 import {
   Table,
   TableBody,
@@ -32,7 +32,7 @@ import {
 export default function ExperienceTab() {
   return (
     <Timeline>
-      {meta.experience.map((e, i) => (
+      {resume.experience.map((e, i) => (
         <TimelineCard key={e.address.institution} index={i}>
           <Header>
             <HeaderTop>

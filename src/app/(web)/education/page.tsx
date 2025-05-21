@@ -1,5 +1,5 @@
 import { displayInterval } from "@/lib/utils";
-import { meta } from "@/data";
+import { resume } from "@/data";
 import {
   Accordion,
   AccordionContent,
@@ -22,7 +22,7 @@ import {
 export default function EducationTab() {
   return (
     <Timeline>
-      {meta.education.map((e, i) => (
+      {resume.education.map((e, i) => (
         <TimelineCard key={e.degree} index={i}>
           <Header>
             <HeaderTop>

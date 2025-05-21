@@ -1,10 +1,10 @@
-import { SCV, TCV } from "@/schemas";
+import { SResume, TResume } from "@/schemas";
 import { projects } from "./projects";
 import { experience } from "./experience";
 import { education } from "./education";
 import { languages } from "./languages";
 import { socials } from "./socials";
-import { skills } from "./skills";
+import { skills, softSkills } from "./skills";
 import { references } from "./references";
 import { intervalToDuration } from "date-fns";
 
@@ -13,7 +13,7 @@ const yearsOfExperience = intervalToDuration({
   end: new Date(),
 }).years;
 
-export const cv: TCV = {
+const data: TResume = {
   title: "Développeur Full Stack",
   // title: "Concepteur Logiciel",
   birthday: new Date("2001-04-20"),
@@ -39,6 +39,7 @@ export const cv: TCV = {
   drivingLicense: "B",
   keywords: ["TypeScript", "React", ".NET", "Linux"],
   skills,
+  softSkills,
   projects,
   experience,
   education,
@@ -58,4 +59,4 @@ export const cv: TCV = {
   references,
 };
 
-export const meta = SCV.parse(cv);
+export const resume = SResume.parse(data);

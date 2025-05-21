@@ -199,3 +199,10 @@ export const SSkill = z.object({
   items: z.array(z.string()),
 });
 export type TSkill = z.infer<typeof SSkill>;
+
+export const SSoftSkill = z.object({
+  name: z.literal(Object.keys(SoftSkillMeta) as (keyof typeof SoftSkillMeta)[]),
+  description: z.string(),
+});
+
+export type TSoftSkill = z.infer<typeof SSoftSkill>;

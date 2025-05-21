@@ -1,4 +1,4 @@
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { Section } from "../section";
 import { displayInterval } from "@/lib/utils";
 import { Institution } from "../institution";
@@ -7,7 +7,7 @@ export function Education() {
   return (
     <Section title="Formation">
       <ul className="flex flex-col gap-1">
-        {meta.education.map((e) => (
+        {resume.education.map((e) => (
           <li key={e.address.institution}>
             <div className="flex justify-between items-center">
               <div className="font-bold text-sm">

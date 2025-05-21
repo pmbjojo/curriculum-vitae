@@ -1,13 +1,13 @@
-import { meta } from "@/data";
+import { resume } from "@/data";
 
 export function Summary() {
   return (
     <>
       <div className="text-center font-bold text-base">
-        {meta.keywords.join(" - ")}
+        {resume.keywords.join(" - ")}
       </div>
       <div className="text-justify">
-        {meta.summary} {meta.highlights.localisation}.
+        {resume.summary} {resume.highlights.localisation}.
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import { meta } from "@/data";
+import { resume } from "@/data";
 import { Button } from "@/components/ui/button";
 import { IconSpan } from "@/components/web/icon-span";
 import { Download, FileText, Mail } from "lucide-react";
@@ -15,7 +15,7 @@ export function HeroActions() {
       transition={{ duration: 0.5, delay: 0.3 }}
     >
       <Button asChild>
-        <Link href={`mailto:${meta.email}`} className="group">
+        <Link href={`mailto:${resume.email}`} className="group">
           <IconSpan Icon={Mail}>Contactez Moi</IconSpan>
         </Link>
       </Button>
