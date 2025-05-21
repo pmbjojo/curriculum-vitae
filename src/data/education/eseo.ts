@@ -1,8 +1,8 @@
 import { TEducation } from "@/schemas/education";
 
 export const eseo: TEducation = {
-  degree: "Diplôme d'Ingénieur Informatique en Apprentissage",
-  // "Diplôme d'Ingénieur Informatique et Systèmes d'Information",
+  degree:
+    "Diplôme d'Ingénieur Informatique et Systèmes d'Information en Apprentissage",
   options: ["Cybersécurité"],
   dates: {
     start: new Date("2021-09-01"),
@@ -20,13 +20,7 @@ export const eseo: TEducation = {
   description:
     "J'ai obtenu mon diplôme d'ingénieur en apprentissage, spécialisé en informatique et systèmes d'information. Dès la première année, j'ai été impliqué dans des projets de développement logiciel, ce qui m'a permis d'acquérir une compréhension pratique du fonctionnement d'une entreprise des processus de conception à la mise en œuvre. Au fil du temps, mes responsabilités ont évolué, me conduisant à piloter mon projet de fin d'études. Je pense que cette montée en compétences m'a préparé à assumer pleinement un rôle d'ingénieur dans le secteur de l'informatique.",
   grade: "Top 20, 15/20, Mention Bien",
-  // algorithmique
-  // programmation orientée objet
-  // architecture des systèmes informatiques
-  // réseaux,
-  // bases de données
-  // gestion de projet logiciel
-  // Connaissances approfondies en développement logiciel, systèmes d'exploitation et technologies web
+
   program: [
     {
       category: "Tronc commun (Semestres 1 à 3)",
@@ -63,6 +57,8 @@ export const eseo: TEducation = {
   ],
   skills: [
     {
+      // algorithmique
+      // programmation orientée objet
       title: "Programmation et développement logiciel",
       items: [
         "Maîtrise des langages de programmation C, Java, Python ainsi que des langages web HTML, CSS, JavaScript.",
