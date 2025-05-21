@@ -1,5 +1,5 @@
 import { SAddress } from "@/schemas/utils";
-import { z } from "zod";
+import { z } from "zod/v4";
 import { LinkButton } from "./link-button";
 import { ReactNode } from "react";
 

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 
 export const SProjectType = z.enum([
   "Personnel",
@@ -13,8 +13,8 @@ export const SProject = z.object({
   name: z.string(),
   description: z.string(),
   technologies: z.array(z.string()),
-  repository: z.string().url().optional(),
-  website: z.string().url().optional(),
+  repository: z.url().optional(),
+  website: z.url().optional(),
   year: z.number(),
   type: SProjectType,
 });

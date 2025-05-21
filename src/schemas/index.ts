@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { SProject } from "./project";
 import { SExperience } from "./experience";
 import { SEducation } from "./education";
@@ -16,11 +16,11 @@ export type TSocial = z.infer<typeof SSocial>;
 
 export const SCV = z.object({
   title: z.string(),
-  website: z.string().url(),
+  website: z.url(),
   firstName: z.string(),
   lastName: z.string(),
   birthday: z.date(),
-  email: z.string().email(),
+  email: z.email(),
   phone: z.string(),
   address: SAddress,
   drivingLicense: z.string().optional(),

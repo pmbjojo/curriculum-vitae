@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { SAddress, SDates } from "./utils";
 
 export const STask = z.object({
@@ -21,6 +21,6 @@ export const SExperience = z.object({
   tasks: z.array(STask),
   technologies: z.array(z.string()),
   methodologies: z.array(z.string()),
-  website: z.string().url(),
+  website: z.url(),
 });
 export type TExperience = z.infer<typeof SExperience>;

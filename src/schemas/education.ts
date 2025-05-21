@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 import { SAddress, SDates } from "./utils";
 
 export const SEducation = z.object({
