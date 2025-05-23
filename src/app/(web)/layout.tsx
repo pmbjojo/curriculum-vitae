@@ -21,7 +21,6 @@ export default function Home({ children }: { children: ReactNode }) {
           numSquares={30}
           maxOpacity={0.1}
           duration={3}
-          repeatDelay={1}
           className={cn(
             "-z-10 skew-y-12 opacity-50",
             "[mask-image:radial-gradient(ellipse_closest-side_at_center,white,transparent)]",
