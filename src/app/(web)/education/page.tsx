@@ -40,7 +40,7 @@ export default function EducationTab() {
             <div className="flex flex-col gap-2">
               <p>{e.description}</p>
               {e.highlights && (
-                <div className="flex gap-3 flex-col lg:flex-row">
+                <div className="flex flex-col gap-3 lg:flex-row">
                   {e.highlights.map((p) => (
                     <div key={p.title}>
                       <div className="font-bold">{p.title}</div>
@@ -70,7 +70,7 @@ export default function EducationTab() {
                       {e.skills.map((p) => (
                         <div key={p.title}>
                           <div className="font-bold">{p.title}</div>
-                          <ul className="list-disc list-inside">
+                          <ul className="list-inside list-disc">
                             {p.items.map((item) => (
                               <li key={item}>{item}</li>
                             ))}

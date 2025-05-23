@@ -66,26 +66,26 @@ export default function ExperienceTab() {
                         <TableBody>
                           <TableRow>
                             <TableHead>Objectif</TableHead>
-                            <TableCell className="whitespace-normal break-words">
+                            <TableCell className="break-words whitespace-normal">
                               {t.goal}
                             </TableCell>
                           </TableRow>
                           <TableRow>
                             <TableHead>Description</TableHead>
-                            <TableCell className="whitespace-pre-line break-words">
+                            <TableCell className="break-words whitespace-pre-line">
                               {t.description}
                             </TableCell>
                           </TableRow>
                           <TableRow>
                             <TableHead>Responsabilités</TableHead>
-                            <TableCell className="whitespace-normal break-words">
+                            <TableCell className="break-words whitespace-normal">
                               {t.roles.join(", ")}
                             </TableCell>
                           </TableRow>
                           <TableRow>
                             <TableHead>Résultats</TableHead>
-                            <TableCell className="whitespace-normal break-words">
-                              <ul className="list-disc list-inside">
+                            <TableCell className="break-words whitespace-normal">
+                              <ul className="list-inside list-disc">
                                 {t.results.map((r) => (
                                   <li key={r}>{r}</li>
                                 ))}
@@ -94,7 +94,7 @@ export default function ExperienceTab() {
                           </TableRow>
                           <TableRow>
                             <TableHead>Technologies</TableHead>
-                            <TableCell className="whitespace-normal break-words">
+                            <TableCell className="break-words whitespace-normal">
                               <div className="flex gap-1">
                                 <BadgeList items={t.technologies} max={5} />
                               </div>

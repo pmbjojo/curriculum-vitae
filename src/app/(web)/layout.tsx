@@ -9,16 +9,27 @@ import { motion } from "motion/react";
 import { Briefcase, FolderGit2, GraduationCap } from "lucide-react";
 import ScrollToTopButton from "@/components/web/scroll-to-top";
 import { TabButton } from "@/components/web/tab-button";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { cn } from "@/lib/utils";
 
 export default function Home({ children }: { children: ReactNode }) {
   const scrollToRef = useRef<HTMLDivElement>(null);
   return (
     <>
-      <div className="min-h-dvh flex flex-col">
+      <div className="relative flex min-h-dvh flex-col">
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          className={cn(
+            "-z-10 skew-y-12 opacity-50",
+            "[mask-image:radial-gradient(ellipse_closest-side_at_center,white,transparent)]",
+          )}
+        />
         <header className="flex justify-end p-4">
           <ModeToggle />
         </header>
-        <div className="flex grow justify-center items-center">
+        <div className="flex grow items-center justify-center">
           <Hero />
         </div>
         <ScrollToJourneyButton
@@ -28,7 +39,7 @@ export default function Home({ children }: { children: ReactNode }) {
       <ScrollToTopButton />
       <main
         ref={scrollToRef}
-        className="w-full bg-muted py-6 md:py-12 flex flex-col gap-10 grow"
+        className="bg-muted flex w-full grow flex-col gap-10 py-6 md:py-12"
       >
         <SkillsSection />
         <section className="container px-4">
