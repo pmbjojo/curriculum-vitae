@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/web/theme-provider";
 import { resume } from "@/data";
 import { Analytics } from "@vercel/analytics/react";
-import { ParticlesProvider } from "@/components/web/particles-provider";
 import { geistMono, geistSans, roboto } from "@/styles/fonts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { env } from "@/lib/env";
@@ -63,7 +62,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="grow">{children}</main>
-          <ParticlesProvider />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
