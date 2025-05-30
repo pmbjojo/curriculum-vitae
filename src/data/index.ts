@@ -59,4 +59,8 @@ const data: TResume = {
   references,
 };
 
-export const resume = SResume.parse(data);
+const result = SResume.safeParse(data);
+if (!result.success) {
+  console.error(result.error);
+}
+export const resume = result.data ?? data;
