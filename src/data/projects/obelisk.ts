@@ -8,5 +8,5 @@ export const obelisk: TProject = {
     "Un homelab personnel permettant d'héberger divers services comme un cloud privé, une bibliothèque multimédia et un serveur de streaming. Il sert aussi de terrain d'expérimentation pour des machines virtuelles et des conteneurs Docker.",
   technologies: ["Docker", "Ubuntu", "Streaming"],
   type: "Personnel",
-  year: 2023,
+  year: 2025,
 };
