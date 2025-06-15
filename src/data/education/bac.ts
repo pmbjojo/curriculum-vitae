@@ -19,4 +19,5 @@ export const bac: TEducation = {
     "J'ai choisi la spécialité Sciences de l'Ingénieur (SI) au sein du baccalauréat scientifique. À travers des projets concrets, j'ai appris à modéliser, simuler et analyser des systèmes techniques. Cette expérience a renforcé mon intérêt pour l'ingénierie et m'a préparé aux études supérieures dans ce domaine.",
   website: "https://lycee-tocqueville.fr/",
   grade: "Passable",
+  pdf: false,
 };

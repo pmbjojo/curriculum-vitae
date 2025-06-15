@@ -11,7 +11,7 @@ export const SEducation = z.object({
       z.object({
         category: z.string(),
         description: z.string(),
-      })
+      }),
     )
     .optional(),
   highlights: z
@@ -19,7 +19,7 @@ export const SEducation = z.object({
       z.object({
         title: z.string(),
         description: z.string(),
-      })
+      }),
     )
     .optional(),
   skills: z
@@ -27,11 +27,12 @@ export const SEducation = z.object({
       z.object({
         title: z.string(),
         items: z.array(z.string()),
-      })
+      }),
     )
     .optional(),
   grade: z.string().optional(),
   options: z.array(z.string()).optional(),
   website: z.string(),
+  pdf: z.boolean(),
 });
 export type TEducation = z.infer<typeof SEducation>;

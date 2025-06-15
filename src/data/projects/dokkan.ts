@@ -10,5 +10,6 @@ export const dokkan: TProject = {
   type: "Personnel",
   year: 2025,
   repository: "https://github.com/pmbjojo/dokkan",
-  website: "https://dokkan-explorer.vercel.app",
+  // website: "https://dokkan-explorer.vercel.app",
+  pdf: false,
 };

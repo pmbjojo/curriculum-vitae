@@ -12,4 +12,5 @@ export const vodkify: TProject = {
   year: 2024,
   repository: "https://github.com/pmbjojo/vodkify",
   website: "https://vodkify.vercel.app",
+  pdf: false,
 };

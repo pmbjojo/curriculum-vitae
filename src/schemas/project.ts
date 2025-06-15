@@ -17,5 +17,6 @@ export const SProject = z.object({
   website: z.url().optional(),
   year: z.number(),
   type: SProjectType,
+  pdf: z.boolean(),
 });
 export type TProject = z.infer<typeof SProject>;

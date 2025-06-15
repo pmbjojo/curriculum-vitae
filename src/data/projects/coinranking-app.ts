@@ -11,4 +11,5 @@ export const coinrankingApp: TProject = {
   type: "Académique",
   year: 2023,
   repository: "https://github.com/pmbjojo/coinranking-app",
+  pdf: false,
 };

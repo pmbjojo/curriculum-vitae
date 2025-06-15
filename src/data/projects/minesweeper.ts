@@ -10,4 +10,5 @@ export const minesweeper: TProject = {
   type: "Académique",
   year: 2022,
   repository: "https://github.com/pmbjojo/minesweeper",
+  pdf: false,
 };

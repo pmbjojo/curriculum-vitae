@@ -10,4 +10,5 @@ export const flashmobiles: TProject = {
   technologies: ["Python", "Tornado", "Raspberry Pi", "JavaScript"],
   type: "Académique",
   year: 2021,
+  pdf: false,
 };

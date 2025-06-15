@@ -9,8 +9,8 @@ import { coinrankingApp } from "./coinranking-app";
 import { drawingCompetitionManagement } from "./drawing-competition-management";
 import { minesweeper } from "./minesweeper";
 import { oracleLab } from "./oracle-lab";
-// import { jetpackComposeCourse } from "./jetpack-compose-for-android-developers";
-// import { dokkan } from "./dokkan";
+import { jetpackCompose } from "./jetpack-compose";
+import { dokkan } from "./dokkan";
 
 export const projects: TProject[] = [
   sigl,
@@ -23,6 +23,6 @@ export const projects: TProject[] = [
   flashmobiles,
   vodkify,
   beAnArtist,
-  // dokkan,
-  // jetpackComposeCourse,
+  dokkan,
+  jetpackCompose,
 ];

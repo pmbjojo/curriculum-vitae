@@ -10,4 +10,5 @@ export const oracleLab: TProject = {
   type: "Académique",
   year: 2023,
   repository: "https://github.com/pmbjojo/oracle-lab",
+  pdf: false,
 };
