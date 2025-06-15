@@ -1,5 +1,5 @@
 import { resume } from "@/data";
-import { SDates } from "@/schemas/utils";
+import { SDates, TAddress } from "@/schemas/utils";
 import { clsx, type ClassValue } from "clsx";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { fr } from "date-fns/locale";
@@ -16,13 +16,13 @@ export function displayDuration(dates: z.infer<typeof SDates>) {
       start: dates.start,
       end: dates.end,
     }),
-    { locale: fr }
+    { locale: fr },
   );
 }
 
 export function displayInterval(
   dates: z.infer<typeof SDates>,
-  formatStr: string = "MMM yyyy"
+  formatStr: string = "MMM yyyy",
 ) {
   return (
     format(dates.start, formatStr, { locale: fr }) +
@@ -34,3 +34,6 @@ export function displayInterval(
 export const fileName = `CV ${
   resume.firstName
 } ${resume.lastName.toUpperCase()}.pdf`;
+
+export const mapLink = (address: TAddress) =>
+  `https://www.google.com/maps/search/?api=1&query=${address.street}+${address.city}+${address.state}+${address.zip}+${address.country}`;
