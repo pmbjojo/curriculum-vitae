@@ -1,29 +1,36 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Badge } from "../ui/badge";
+import { Badge, badgeVariants } from "../ui/badge";
+import { VariantProps } from "class-variance-authority";
 
 export function BadgeList({
   items,
   max = 5,
+  variant = "default",
+  overflowVariant = "outline",
 }: {
   items: string[];
   max?: number;
+  variant?: VariantProps<typeof badgeVariants>["variant"];
+  overflowVariant?: VariantProps<typeof badgeVariants>["variant"];
 }) {
   const [showMore, setShowMore] = useState(false);
   const displayedItems = useMemo(
     () => (showMore ? items : items.slice(0, max)),
-    [items, max, showMore]
+    [items, max, showMore],
   );
   return (
     <div className="flex flex-wrap gap-1">
       {displayedItems.map((item) => (
-        <Badge key={item}>{item}</Badge>
+        <Badge key={item} variant={variant}>
+          {item}
+        </Badge>
       ))}
       {items.length > max && (
         <Badge
           className="cursor-pointer"
-          variant="outline"
+          variant={overflowVariant}
           onClick={() => {
             setShowMore(!showMore);
           }}
