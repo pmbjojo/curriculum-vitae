@@ -42,7 +42,7 @@ export default function Home({ children }: { children: ReactNode }) {
         className="bg-muted flex w-full grow flex-col gap-10 py-6 md:py-12"
       >
         <SkillsSection />
-        <section className="container px-4">
+        <section className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
