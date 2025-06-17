@@ -25,7 +25,7 @@ const data: TResume = {
   highlights: {
     experience: `+${yearsOfExperience} ans d'expérience en développement logiciel`,
     education: "Diplôme d'Ingénieur en Informatique et Systèmes d'Information",
-    localisation: "Disponible sur la région Grand Ouest",
+    localisation: "Disponible sur la région **Grand Ouest**",
   },
   address: {
     institution: "Home",
@@ -44,7 +44,7 @@ const data: TResume = {
   education,
   languages,
   summary:
-    "Ingénieur logiciel avec 3 ans d'expérience, j'ai conçu et fait évoluer des outils embarqués en C++ et React dédiés à la supervision et à la configuration d'automates déployés dans les postes électriques français. J'ai également créé et modernisé des applications métiers en .NET et Blazor, dans un environnement international et agile.",
+    "Ingénieur logiciel avec **3 ans d'expérience**, j'ai conçu et fait évoluer des outils embarqués en **C++** et **React** dédiés à la supervision et à la configuration d'automates déployés dans les postes électriques français. J'ai également créé et modernisé des applications métiers en **.NET** et **Blazor**, dans un environnement international et **agile**.",
   hobbies: [
     "Curiosité technologique",
     "Sports loisirs",
