@@ -1,5 +1,6 @@
 import { resume } from "@/data";
 import { motion } from "motion/react";
+import Markdown from "react-markdown";
 
 export function HeroDescription() {
   return (
@@ -13,7 +14,7 @@ export function HeroDescription() {
         {resume.firstName} {resume.lastName}
       </motion.h1>
       <motion.h2
-        className="text-xl font-medium text-muted-foreground md:text-2xl"
+        className="text-muted-foreground text-xl font-medium md:text-2xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
@@ -21,12 +22,12 @@ export function HeroDescription() {
         {resume.title}
       </motion.h2>
       <motion.p
-        className="max-w-[600px] text-muted-foreground md:text-xl"
+        className="text-muted-foreground max-w-[600px] md:text-xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {resume.summary}
+        <Markdown>{resume.summary}</Markdown>
       </motion.p>
     </div>
   );
