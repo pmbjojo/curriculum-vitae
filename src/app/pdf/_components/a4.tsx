@@ -11,8 +11,8 @@ export function A4({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "flex-shrink-0 font-cv w-[210mm] h-[297mm] box-border mx-auto bg-white overflow-hidden flex flex-col text-black print:mx-0 print:my-0 print:p-4 print:w-screen print:rounded-none print:shadow-none md:my-10 md:rounded-md md:shadow-2xl",
-        className
+        "font-cv mx-auto box-border flex h-[297mm] w-[210mm] flex-shrink-0 flex-col overflow-hidden bg-white text-black md:my-10 md:rounded-md md:shadow-2xl print:mx-0 print:my-0 print:w-screen print:rounded-none print:p-4 print:shadow-none",
+        className,
       )}
       {...props}
     >
