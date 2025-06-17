@@ -21,4 +21,5 @@ export const sigl: TProject = {
   type: "Académique",
   year: 2024,
   repository: "https://gitlab.com/pmbjojo/sigl",
+  pdf: true,
 };

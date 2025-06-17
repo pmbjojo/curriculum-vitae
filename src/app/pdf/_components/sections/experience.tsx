@@ -1,7 +1,7 @@
 import { displayInterval } from "@/lib/utils";
 import { resume } from "@/data";
 import { Section } from "../section";
-import { Institution } from "../institution";
+import { Institution, Description } from "../institution";
 
 export function Experience() {
   return (
@@ -10,15 +10,18 @@ export function Experience() {
         {resume.experience.map((e) => (
           <li key={e.website}>
             <div>
-              <div className="flex justify-between items-center">
-                <h3 className="font-bold text-sm">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-bold">
                   {e.title} ({e.contract})
                 </h3>
                 <div>{displayInterval(e.dates)}</div>
               </div>
-              <Institution address={e.address} />
+              <Description>
+                <Institution address={e.address} url={e.website} />,{" "}
+                {e.department}
+              </Description>
             </div>
-            <ul className="list-disc list-inside">
+            <ul className="list-inside list-disc">
               {e.tasks.map((t) => (
                 <li key={t.title}>{t.title}</li>
               ))}

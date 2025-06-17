@@ -3,7 +3,7 @@ import { TSkill, TSoftSkill } from "@/schemas/skill";
 export const skills: TSkill[] = [
   {
     domain: "Langages",
-    items: ["TypeScript", "C#", "Java", "C++", "Python"],
+    items: ["TypeScript", "C#", "Java", "Kotlin", "C++", "Python"],
   },
   { domain: "Frameworks", items: [".NET", "React", "Node.Js"] },
   {

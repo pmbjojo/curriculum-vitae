@@ -10,4 +10,5 @@ export const beAnArtist: TProject = {
   type: "Académique",
   year: 2022,
   repository: "https://github.com/pmbjojo/be-an-artist",
+  pdf: true,
 };

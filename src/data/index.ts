@@ -15,7 +15,6 @@ const yearsOfExperience = intervalToDuration({
 
 const data: TResume = {
   title: "Développeur Full Stack",
-  // title: "Concepteur Logiciel",
   birthday: new Date("2001-04-20"),
   firstName: "Joshua",
   lastName: "Jourdam",
@@ -24,7 +23,7 @@ const data: TResume = {
   socials,
   website: "https://joshua-jourdam.vercel.app/",
   highlights: {
-    experience: `+${yearsOfExperience} années d'expérience en développement logiciel`,
+    experience: `+${yearsOfExperience} ans d'expérience en développement logiciel`,
     education: "Diplôme d'Ingénieur en Informatique et Systèmes d'Information",
     localisation: "Disponible sur la région Grand Ouest",
   },
@@ -45,16 +44,12 @@ const data: TResume = {
   education,
   languages,
   summary:
-    "Ingénieur diplômé de l'ESEO Angers avec 3 ans d'expérience en apprentissage dans la R&D chez SDEL Contrôle Commande, entreprise de VINCI Energies. Expérience en développement full stack, spécialisé en React et .NET.",
-  // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département Recherche et Développement de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement logiciel.",
-  // "Je suis ingénieur jeune diplômé de l'ESEO Angers. J'ai travaillé trois ans en apprentissage au sein du département R&D de SDEL Contrôle Commande, société de VINCI Energies. J'ai également pu évoluer au sein d'une équipe de développement agile lors de mon récent stage aux Pays Bas. Fort de mon expérience avec React et .NET, je recherche un poste en développement web full stack.",
+    "Ingénieur logiciel avec 3 ans d'expérience, j'ai conçu et fait évoluer des outils embarqués en C++ et React dédiés à la supervision et à la configuration d'automates déployés dans les postes électriques français. J'ai également créé et modernisé des applications métiers en .NET et Blazor, dans un environnement international et agile.",
   hobbies: [
     "Curiosité technologique",
     "Sports loisirs",
     "Stratégie et réflexion",
     "Culture geek",
-    // "Serveur domestique",
-    // "Veille Technologique",
   ],
   references,
 };

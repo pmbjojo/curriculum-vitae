@@ -79,4 +79,5 @@ export const geii: TEducation = {
       ],
     },
   ],
+  pdf: true,
 };

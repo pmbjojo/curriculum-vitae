@@ -110,4 +110,5 @@ export const eseo: TEducation = {
       ],
     },
   ],
+  pdf: true,
 };
