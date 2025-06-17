@@ -1,6 +1,6 @@
 import { resume } from "@/data";
 import { Section } from "../section";
-import { Description } from "../institution";
+import { Description } from "../utils";
 
 export function Projects({ className }: { className?: string }) {
   return (

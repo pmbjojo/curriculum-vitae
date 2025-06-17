@@ -14,7 +14,7 @@ export function CurriculumVitae() {
   return (
     <A4>
       <Header color={accentColor} />
-      <div className="p-6 gap-2 flex flex-col text-xs">
+      <div className="flex flex-col gap-2 px-6 py-3 text-xs">
         <Summary />
         <Experience />
         <Education />

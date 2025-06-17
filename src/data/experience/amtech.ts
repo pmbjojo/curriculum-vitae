@@ -17,6 +17,7 @@ export const amtech: TExperience = {
     start: new Date("2021-04-01"),
     end: new Date("2021-05-31"),
   },
+  icon: "/amtech.png",
   description:
     "J'ai travaillé sur le développement d'un système embarqué destiné à l'inspection d'environnements contrôlés dans le secteur nucléaire. Mon travail consistait à concevoir et programmer une caméra d'inspection intégrant des protocoles de communication spécifiques pour interagir avec des équipements industriels. Ce projet m'a apporté une expérience précieuse dans le domaine des systèmes embarqués et de la communication entre machines.",
   tasks: [
@@ -39,8 +40,8 @@ export const amtech: TExperience = {
         "Réalisation d'un boîtier de commande déporté",
       ],
       skills: [
-        "Systèmes linux embarqués",
-        "Interfaces de communication industrielle (Ethernet/IP, SBUS, CAN BUS, UART)",
+        "Rétro-ingénierie et intégration des protocoles de communication (SBUS, CAN BUS) d'un système de **caméra Gimbal**",
+        "Implémentation d'une API de pilotage en **Python** (Flask) et d'un serveur de streaming vidéo avec FFmpeg sur **Raspberry Pi**",
       ],
       technologies: [
         "Raspberry Pi",

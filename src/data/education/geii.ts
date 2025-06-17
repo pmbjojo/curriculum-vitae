@@ -16,6 +16,7 @@ export const geii: TEducation = {
     zip: "50130",
     country: "France",
   },
+  icon: "/unicaen.png",
   description:
     "J'ai suivi un DUT Génie Électrique et Informatique Industrielle (GEII), une formation axée sur les systèmes électroniques, l'automatisation et l'informatique industrielle. Cette immersion dans les systèmes automatisés et les réseaux industriels a éveillé ma passion pour l'informatique. Les projets pratiques et mon stage réalisés durant cette formation ont renforcé mon intérêt pour ce domaine et m'ont orienté vers une école d'ingénieur en informatique.",
   website: "https://iut-grand-ouest-normandie.unicaen.fr/",

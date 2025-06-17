@@ -17,6 +17,7 @@ export const sdel: TExperience = {
     start: new Date("2021-09-01"),
     end: new Date("2024-08-31"),
   },
+  icon: "/vinci.png",
   description:
     "Au sein de l'équipe de développement logiciel du service R&D, j'ai principalement été chargé d'introduire de nouvelles technologies et de moderniser les composants logiciels existants. Mon travail s'est inscrit dans un contexte industriel exigeant, lié aux systèmes de contrôle et de supervision utilisés dans le secteur de l'énergie. Cette expérience m'a permis de monter en autonomie et de développer des compétences en développement web, en programmation embarquée ainsi qu'en rigueur dans un environnement normé.",
   tasks: [
@@ -50,11 +51,10 @@ export const sdel: TExperience = {
         "Retour positif de l'équipe concernant l'expérience de développement par rapport à l'ancienne application",
       ],
       skills: [
-        "Gestion de projet",
-        "Conception d'interfaces utilisateur",
-        "Communication avec des systèmes embarqués",
-        "Test d'interfaces utilisateur",
-        "Développement API REST",
+        "Conception et développement d'une application pour la configuration d'automates industriels avec **React** et **TypeScript**",
+        "Développement d'une **API REST** embarquée en **C++** avec Pistache",
+        "Spécification **OpenAPI** et intégration avec des outils de génération de code pour l'application front-end",
+        "Test des composants d'interface avec **React Testing Library** et **Vitest**",
       ],
       technologies: [
         "TypeScript",
@@ -107,7 +107,11 @@ export const sdel: TExperience = {
         "Suivi des failles de sécurité",
         "Simplification du processus de déploiement et de mise à jour",
       ],
-      skills: ["Administration système Linux", "Outils de build"],
+      skills: [
+        "Conception et personnalisation d'images Linux pour équipements embarqués avec **Yocto Project**",
+        "Création de recettes **Bitbake** pour compiler et intégrer les logiciels internes à l'image système",
+        "Configuration du **noyau Linux**, du **bootloader** et des **services systemd** pour cibles embarquées variées",
+      ],
       technologies: [
         "Linux",
         "Yocto Project",
