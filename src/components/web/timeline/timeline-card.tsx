@@ -16,7 +16,10 @@ export function TimelineCard({
 }) {
   return (
     <motion.div
-      className={cn("relative", className)}
+      className={cn(
+        "bg-card relative rounded-lg border p-5 shadow-sm transition-shadow hover:shadow-md",
+        className,
+      )}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -24,9 +27,7 @@ export function TimelineCard({
       {...props}
     >
       {Dot}
-      <motion.div className="rounded-lg border bg-card p-5 shadow-sm hover:shadow-md transition-shadow">
-        {children}
-      </motion.div>
+      {children}
     </motion.div>
   );
 }
@@ -51,8 +52,8 @@ export function TimelineDot({
   return (
     <motion.div
       className={cn(
-        "absolute -left-[35px] top-1/2 -translate-y-1/2 size-5 rounded-full border-4 border-background bg-primary",
-        className
+        "border-background bg-primary absolute top-1/2 -left-[35px] size-5 -translate-y-1/2 rounded-full border-4",
+        className,
       )}
       initial={{ scale: 0 }}
       whileInView={{ scale: 1 }}
@@ -82,7 +83,7 @@ export function Header({
   ...props
 }: ComponentProps<"div">) {
   return (
-    <div className={cn("flex flex-col mb-3", className)} {...props}>
+    <div className={cn("flex flex-col", className)} {...props}>
       {children}
     </div>
   );
@@ -96,8 +97,8 @@ export function HeaderDescription({
   return (
     <div
       className={cn(
-        "flex flex-row md:items-center gap-x-3 gap-y-1 text-muted-foreground text-sm flex-wrap",
-        className
+        "text-muted-foreground flex flex-row flex-wrap gap-x-3 gap-y-1 text-sm md:items-center",
+        className,
       )}
       {...props}
     >
@@ -113,7 +114,7 @@ export function HeaderAction({
 }: ComponentProps<"div">) {
   return (
     <div
-      className={cn("flex gap-3 text-muted-foreground", className)}
+      className={cn("text-muted-foreground flex gap-3", className)}
       {...props}
     >
       {children}

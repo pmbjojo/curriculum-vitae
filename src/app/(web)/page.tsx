@@ -33,22 +33,28 @@ export default function ExperienceTab() {
   return (
     <Timeline>
       {resume.experience.map((e, i) => (
-        <TimelineCard key={e.address.institution} index={i}>
-          <Header>
-            <HeaderTop>
-              <Title>{e.title}</Title>
-              <HeaderAction>{e.contract}</HeaderAction>
-            </HeaderTop>
-            <HeaderDescription>
-              <Institution
-                institution={{ name: e.address.institution, url: e.website }}
-              />
-
-              <Address address={e.address} />
-              <Department>{e.department}</Department>
-              <Period>{displayInterval(e.dates)}</Period>
-            </HeaderDescription>
-          </Header>
+        <TimelineCard
+          key={e.address.institution}
+          index={i}
+          className="flex flex-col gap-3"
+        >
+          <div className="flex items-center gap-3">
+            <img src={e.icon} alt={e.address.institution} className="size-8" />
+            <Header className="w-full">
+              <HeaderTop>
+                <Title>{e.title}</Title>
+                <HeaderAction>{e.contract}</HeaderAction>
+              </HeaderTop>
+              <HeaderDescription>
+                <Institution
+                  institution={{ name: e.address.institution, url: e.website }}
+                />
+                <Address address={e.address} />
+                <Department>{e.department}</Department>
+                <Period>{displayInterval(e.dates)}</Period>
+              </HeaderDescription>
+            </Header>
+          </div>
           <Content>
             <div className="flex flex-col gap-2">
               <p>{e.description}</p>

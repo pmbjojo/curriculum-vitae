@@ -24,18 +24,21 @@ export default function EducationTab() {
     <Timeline>
       {resume.education.map((e, i) => (
         <TimelineCard key={e.degree} index={i}>
-          <Header>
-            <HeaderTop>
-              <Title>{e.degree}</Title>
-            </HeaderTop>
-            <HeaderDescription>
-              <Institution
-                institution={{ name: e.address.institution, url: e.website }}
-              />
-              <Address address={e.address} />
-              <Period>{displayInterval(e.dates)}</Period>
-            </HeaderDescription>
-          </Header>
+          <div className="flex items-center gap-3">
+            <img src={e.icon} alt={e.address.institution} className="size-8" />
+            <Header className="w-full">
+              <HeaderTop>
+                <Title>{e.degree}</Title>
+              </HeaderTop>
+              <HeaderDescription>
+                <Institution
+                  institution={{ name: e.address.institution, url: e.website }}
+                />
+                <Address address={e.address} />
+                <Period>{displayInterval(e.dates)}</Period>
+              </HeaderDescription>
+            </Header>
+          </div>
           <Content>
             <div className="flex flex-col gap-2">
               <p>{e.description}</p>
