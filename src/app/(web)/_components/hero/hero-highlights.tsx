@@ -2,6 +2,7 @@ import { HighlightCard } from "@/components/web/highlight-card";
 import { resume } from "@/data";
 import { motion } from "motion/react";
 import { Briefcase, GraduationCap, MapPin } from "lucide-react";
+import Markdown from "react-markdown";
 
 export function HeroHighlights() {
   return (
@@ -18,7 +19,9 @@ export function HeroHighlights() {
         {resume.highlights.education}
       </HighlightCard>
       <HighlightCard title="Localisation" Icon={MapPin}>
-        {resume.highlights.localisation}
+        <Markdown disallowedElements={["strong"]} unwrapDisallowed>
+          {resume.highlights.localisation}
+        </Markdown>
       </HighlightCard>
     </motion.div>
   );

@@ -25,7 +25,7 @@ const data: TResume = {
   highlights: {
     experience: `+${yearsOfExperience} ans d'expérience en développement logiciel`,
     education: "Diplôme d'Ingénieur en Informatique et Systèmes d'Information",
-    localisation: "Disponible sur la région Grand Ouest",
+    localisation: "Disponible sur la région **Grand Ouest**",
   },
   address: {
     institution: "Home",
