@@ -1,7 +1,9 @@
 import { displayInterval } from "@/lib/utils";
 import { resume } from "@/data";
 import { Section } from "../section";
-import { Institution, Description } from "../institution";
+import { Institution, Description, Address, InstitutionIcon } from "../utils";
+import Markdown from "react-markdown";
+import { TExperience } from "@/schemas/experience";
 
 export function Experience() {
   return (
@@ -9,25 +11,56 @@ export function Experience() {
       <ul className="flex flex-col gap-1">
         {resume.experience.map((e) => (
           <li key={e.website}>
-            <div>
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold">{e.title}</h3>
-                <div>{displayInterval(e.dates)}</div>
-              </div>
-              <Description>
-                <Institution address={e.address} url={e.website} />,{" "}
-                {e.department}
-              </Description>
-            </div>
+            <ExperienceHeader experience={e} />
             <ul className="list-inside list-disc">
-              {e.tasks.map((t) => (
-                <li key={t.title}>{t.title}</li>
-              ))}
+              {e.tasks.map((t) =>
+                t.skills.map((s) => (
+                  <li key={s} className="text-xs">
+                    <Markdown
+                      components={{
+                        p(props) {
+                          return (
+                            <span className="text-xs">{props.children}</span>
+                          );
+                        },
+                      }}
+                    >
+                      {s}
+                    </Markdown>
+                  </li>
+                )),
+              )}
             </ul>
-            <div>Technologies : {e.technologies.join(", ")}</div>
           </li>
         ))}
       </ul>
     </Section>
+  );
+}
+
+export function ExperienceHeader({ experience }: { experience: TExperience }) {
+  return (
+    <div className="flex flex-col">
+      <div className="flex justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <InstitutionIcon
+            src={experience.icon}
+            alt={experience.address.institution}
+          />
+          <h3 className="text-sm font-bold">
+            <Institution
+              url={experience.website}
+              name={experience.address.institution}
+            />{" "}
+            - {experience.title}
+          </h3>
+        </div>
+        <div>{displayInterval(experience.dates)}</div>
+      </div>
+      <Description>
+        <Address address={experience.address} />,{" "}
+        <span>{experience.department}</span>
+      </Description>
+    </div>
   );
 }

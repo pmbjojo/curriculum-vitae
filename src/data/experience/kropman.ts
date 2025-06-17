@@ -17,6 +17,7 @@ export const kropman: TExperience = {
     start: new Date("2024-06-01"),
     end: new Date("2024-08-31"),
   },
+  icon: "/kropman.png",
   description:
     "Dans une équipe de développement interne, j'ai contribué à la création et à l'amélioration d'applications métiers utilisées par les collaborateurs. Ce stage m'a non seulement permis d'approfondir mes compétences en développement d'applications fullstack en découvrant le framework .NET, mais aussi de pratiquer et d'améliorer mon anglais dans un environnement de travail international.",
   tasks: [
@@ -45,9 +46,8 @@ export const kropman: TExperience = {
         "Utilisation de formulaires pas à pas pour guider les utilisateurs et simplifier la validation",
       ],
       skills: [
-        "Maîtrise du framework .NET et de Blazor",
-        "Connaissance des bases de données relationnelles et de l'Entity Framework",
-        "Conception d'interfaces avec un framework CSS",
+        "Développement fullstack d'applications web internes en **C#** avec **.NET**, **Blazor** et **Entity Framework**",
+        "Implémentation d'un design system basé sur Material Design avec **MudBlazor**",
       ],
       technologies: [
         "C#",
@@ -90,7 +90,9 @@ export const kropman: TExperience = {
         "Conservation des données existantes",
         "Refonte de l'interface utilisateur basée sur material design",
       ],
-      skills: [],
+      skills: [
+        "Migration d'une application **Razor Pages** vers **Blazor** avec refonte de la base de données métier",
+      ],
       technologies: [
         "C#",
         ".NET Core / 8",

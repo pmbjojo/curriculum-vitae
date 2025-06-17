@@ -1,7 +1,8 @@
 import { resume } from "@/data";
 import { Section } from "../section";
 import { displayInterval } from "@/lib/utils";
-import { Institution, Description } from "../institution";
+import { Institution, Description, Address, InstitutionIcon } from "../utils";
+import { TEducation } from "@/schemas/education";
 
 export function Education() {
   return (
@@ -11,19 +12,37 @@ export function Education() {
           .filter((e) => e.pdf)
           .map((e) => (
             <li key={e.address.institution}>
-              <div className="flex items-center justify-between">
-                <div className="text-sm font-bold">
-                  {e.degree}
-                  {e.options && `, option ${e.options.join(", ")}`}
-                </div>
-                <div>{displayInterval(e.dates, "yyyy")}</div>
-              </div>
-              <Description>
-                <Institution address={e.address} url={e.website} />
-              </Description>
+              <EducationHeader education={e} />
             </li>
           ))}
       </ul>
     </Section>
+  );
+}
+
+export function EducationHeader({ education }: { education: TEducation }) {
+  return (
+    <div className="flex flex-col">
+      <div className="flex justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <InstitutionIcon
+            src={education.icon}
+            alt={education.address.institution}
+          />
+          <h3 className="text-sm font-bold tracking-tighter">
+            {education.degree}
+            {education.options && `, option ${education.options.join(", ")}`}
+          </h3>
+        </div>
+        <div>{displayInterval(education.dates, "yyyy")}</div>
+      </div>
+      <Description>
+        <Institution
+          url={education.website}
+          name={education.address.institution}
+        />
+        , <Address address={education.address} />
+      </Description>
+    </div>
   );
 }

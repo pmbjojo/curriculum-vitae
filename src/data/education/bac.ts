@@ -6,6 +6,7 @@ export const bac: TEducation = {
     start: new Date("2017-09-01"),
     end: new Date("2019-06-31"),
   },
+  icon: "/bac.png",
   address: {
     institution: "Lycée Alexis de Tocqueville",
     street: "34 Av. Henri Poincaré",

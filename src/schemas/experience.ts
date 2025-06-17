@@ -22,5 +22,6 @@ export const SExperience = z.object({
   technologies: z.array(z.string()),
   methodologies: z.array(z.string()),
   website: z.url(),
+  icon: z.string(),
 });
 export type TExperience = z.infer<typeof SExperience>;

@@ -5,6 +5,7 @@ export const SEducation = z.object({
   degree: z.string(),
   address: SAddress,
   dates: SDates,
+  icon: z.string(),
   description: z.string(),
   program: z
     .array(

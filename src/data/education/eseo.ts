@@ -17,6 +17,7 @@ export const eseo: TEducation = {
     country: "France",
   },
   website: "https://www.eseo.fr/",
+  icon: "/eseo.png",
   description:
     "J'ai obtenu mon diplôme d'ingénieur en apprentissage, spécialisé en informatique et systèmes d'information. Dès la première année, j'ai été impliqué dans des projets de développement logiciel, ce qui m'a permis d'acquérir une compréhension pratique du fonctionnement d'une entreprise des processus de conception à la mise en œuvre. Au fil du temps, mes responsabilités ont évolué, me conduisant à piloter mon projet de fin d'études. Je pense que cette montée en compétences m'a préparé à assumer pleinement un rôle d'ingénieur dans le secteur de l'informatique.",
   grade: "Top 20, 15/20, Mention Bien",
