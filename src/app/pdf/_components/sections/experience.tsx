@@ -11,9 +11,7 @@ export function Experience() {
           <li key={e.website}>
             <div>
               <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold">
-                  {e.title} ({e.contract})
-                </h3>
+                <h3 className="text-sm font-bold">{e.title}</h3>
                 <div>{displayInterval(e.dates)}</div>
               </div>
               <Description>
