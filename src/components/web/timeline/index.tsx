@@ -11,8 +11,8 @@ export function Timeline({
   return (
     <div
       className={cn(
-        "relative border-l-2 border-primary/20 pl-6 ml-2.5 flex flex-col gap-5",
-        className
+        "sm:border-primary/20 relative flex flex-col gap-5 border-0 pl-0 sm:ml-2.5 sm:border-l-2 sm:pl-6",
+        className,
       )}
       {...props}
     >
