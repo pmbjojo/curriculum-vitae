@@ -23,7 +23,7 @@ export default function EducationTab() {
   return (
     <Timeline>
       {resume.education.map((e, i) => (
-        <TimelineCard key={e.degree} index={i}>
+        <TimelineCard key={e.degree} index={i} className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <img src={e.icon} alt={e.address.institution} className="size-8" />
             <Header className="w-full">
@@ -39,52 +39,50 @@ export default function EducationTab() {
               </HeaderDescription>
             </Header>
           </div>
-          <Content>
-            <div className="flex flex-col gap-2">
-              <p>{e.description}</p>
-              {e.highlights && (
-                <div className="flex flex-col gap-3 lg:flex-row">
-                  {e.highlights.map((p) => (
-                    <div key={p.title}>
-                      <div className="font-bold">{p.title}</div>
-                      <p>{p.description}</p>
-                    </div>
-                  ))}
-                </div>
+          <Content className="flex flex-col gap-2">
+            <p>{e.description}</p>
+            {e.highlights && (
+              <div className="flex flex-col gap-3 lg:flex-row">
+                {e.highlights.map((p) => (
+                  <div key={p.title}>
+                    <div className="font-bold">{p.title}</div>
+                    <p>{p.description}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            <Accordion type="multiple">
+              {e.program && (
+                <AccordionItem value="program">
+                  <AccordionTrigger>Programme</AccordionTrigger>
+                  <AccordionContent>
+                    {e.program.map((p) => (
+                      <div key={p.category}>
+                        <span className="font-bold">{p.category} : </span>
+                        <span>{p.description}</span>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
               )}
-              <Accordion type="multiple">
-                {e.program && (
-                  <AccordionItem value="program">
-                    <AccordionTrigger>Programme</AccordionTrigger>
-                    <AccordionContent>
-                      {e.program.map((p) => (
-                        <div key={p.category}>
-                          <span className="font-bold">{p.category} : </span>
-                          <span>{p.description}</span>
-                        </div>
-                      ))}
-                    </AccordionContent>
-                  </AccordionItem>
-                )}
-                {e.skills && (
-                  <AccordionItem value="skills">
-                    <AccordionTrigger>Compétences</AccordionTrigger>
-                    <AccordionContent>
-                      {e.skills.map((p) => (
-                        <div key={p.title}>
-                          <div className="font-bold">{p.title}</div>
-                          <ul className="list-inside list-disc">
-                            {p.items.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </AccordionContent>
-                  </AccordionItem>
-                )}
-              </Accordion>
-            </div>
+              {e.skills && (
+                <AccordionItem value="skills">
+                  <AccordionTrigger>Compétences</AccordionTrigger>
+                  <AccordionContent>
+                    {e.skills.map((p) => (
+                      <div key={p.title}>
+                        <div className="font-bold">{p.title}</div>
+                        <ul className="list-inside list-disc">
+                          {p.items.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              )}
+            </Accordion>
           </Content>
         </TimelineCard>
       ))}

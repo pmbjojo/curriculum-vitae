@@ -55,64 +55,62 @@ export default function ExperienceTab() {
               </HeaderDescription>
             </Header>
           </div>
-          <Content>
-            <div className="flex flex-col gap-2">
-              <p>{e.description}</p>
-              {e.methodologies.length > 0 && (
-                <div>Méthodologies : {e.methodologies.join(", ")}</div>
-              )}
-              <Accordion type="multiple">
-                {e.tasks.map((t) => (
-                  <AccordionItem value={t.title} key={t.title}>
-                    <AccordionTrigger className="font-bold">
-                      {t.title}
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <Table className="border">
-                        <TableBody>
-                          <TableRow>
-                            <TableHead>Objectif</TableHead>
-                            <TableCell className="break-words whitespace-normal">
-                              {t.goal}
-                            </TableCell>
-                          </TableRow>
-                          <TableRow>
-                            <TableHead>Description</TableHead>
-                            <TableCell className="break-words whitespace-pre-line">
-                              {t.description}
-                            </TableCell>
-                          </TableRow>
-                          <TableRow>
-                            <TableHead>Responsabilités</TableHead>
-                            <TableCell className="break-words whitespace-normal">
-                              {t.roles.join(", ")}
-                            </TableCell>
-                          </TableRow>
-                          <TableRow>
-                            <TableHead>Résultats</TableHead>
-                            <TableCell className="break-words whitespace-normal">
-                              <ul className="list-inside list-disc">
-                                {t.results.map((r) => (
-                                  <li key={r}>{r}</li>
-                                ))}
-                              </ul>
-                            </TableCell>
-                          </TableRow>
-                          <TableRow>
-                            <TableHead>Technologies</TableHead>
-                            <TableCell className="break-words whitespace-normal">
-                              <div className="flex gap-1">
-                                <BadgeList items={t.technologies} max={5} />
-                              </div>
-                            </TableCell>
-                          </TableRow>
-                        </TableBody>
-                      </Table>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
+          <Content className="flex flex-col gap-2">
+            <p>{e.description}</p>
+            {e.methodologies.length > 0 && (
+              <div>Méthodologies : {e.methodologies.join(", ")}</div>
+            )}
+            <Accordion type="multiple">
+              {e.tasks.map((t) => (
+                <AccordionItem value={t.title} key={t.title}>
+                  <AccordionTrigger className="font-bold">
+                    {t.title}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <Table className="border">
+                      <TableBody>
+                        <TableRow>
+                          <TableHead>Objectif</TableHead>
+                          <TableCell className="break-words whitespace-normal">
+                            {t.goal}
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableHead>Description</TableHead>
+                          <TableCell className="break-words whitespace-pre-line">
+                            {t.description}
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableHead>Responsabilités</TableHead>
+                          <TableCell className="break-words whitespace-normal">
+                            {t.roles.join(", ")}
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableHead>Résultats</TableHead>
+                          <TableCell className="break-words whitespace-normal">
+                            <ul className="list-inside list-disc">
+                              {t.results.map((r) => (
+                                <li key={r}>{r}</li>
+                              ))}
+                            </ul>
+                          </TableCell>
+                        </TableRow>
+                        <TableRow>
+                          <TableHead>Technologies</TableHead>
+                          <TableCell className="break-words whitespace-normal">
+                            <div className="flex gap-1">
+                              <BadgeList items={t.technologies} max={5} />
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      </TableBody>
+                    </Table>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </Content>
         </TimelineCard>
       ))}
