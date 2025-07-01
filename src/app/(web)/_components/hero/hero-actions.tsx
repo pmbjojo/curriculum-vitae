@@ -21,17 +21,17 @@ export function HeroActions() {
       </Button>
       <Button asChild variant="outline">
         <Link
-          href="/pdf"
+          href={`/${fileName}`}
           className="group"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <IconSpan Icon={FileText}>Voir PDF</IconSpan>
+          <IconSpan Icon={FileText}>Voir le PDF</IconSpan>
         </Link>
       </Button>
       <Button asChild variant="outline">
         <a href={`/${fileName}`} className="group" download={fileName}>
-          <IconSpan Icon={Download}>Télécharger PDF</IconSpan>
+          <IconSpan Icon={Download}>Télécharger le PDF</IconSpan>
         </a>
       </Button>
     </motion.div>
