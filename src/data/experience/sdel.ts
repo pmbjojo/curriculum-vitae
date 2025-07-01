@@ -55,6 +55,7 @@ export const sdel: TExperience = {
         "Développement d'une **API REST** embarquée en **C++** avec Pistache",
         "Spécification **OpenAPI** et intégration avec des outils de génération de code pour l'application front-end",
         "Test des composants d'interface avec **React Testing Library** et **Vitest**",
+        "**Formation** de 2 développeurs à l'utilisation de React et à l'architecture de l'application",
       ],
       technologies: [
         "TypeScript",
@@ -108,9 +109,9 @@ export const sdel: TExperience = {
         "Simplification du processus de déploiement et de mise à jour",
       ],
       skills: [
-        "Conception et personnalisation d'images Linux pour équipements embarqués avec **Yocto Project**",
+        "Conception et personnalisation d'images **Linux** pour équipements embarqués avec **Yocto Project**",
         "Création de recettes **Bitbake** pour compiler et intégrer les logiciels internes à l'image système",
-        "Configuration du **noyau Linux**, du **bootloader** et des **services systemd** pour cibles embarquées variées",
+        "Configuration du **noyau Linux**, du **bootloader** et des **services systemd** pour cibles embarquées i386 et ARM",
       ],
       technologies: [
         "Linux",

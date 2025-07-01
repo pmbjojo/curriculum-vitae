@@ -46,8 +46,9 @@ export const kropman: TExperience = {
         "Utilisation de formulaires pas à pas pour guider les utilisateurs et simplifier la validation",
       ],
       skills: [
-        "Développement fullstack d'applications web internes en **C#** avec **.NET**, **Blazor** et **Entity Framework**",
-        "Implémentation d'un design system basé sur Material Design avec **MudBlazor**",
+        "Développement d'applications web internes en **C#** avec **.NET**, **Blazor** et **Entity Framework**",
+        "Intégration de l'authentification **JWT** et gestion des autorisations par rôles",
+        "**Revues de code** systématiques, pipeline **CI/CD** et déploiement d'applications .NET sur **IIS**",
       ],
       technologies: [
         "C#",
