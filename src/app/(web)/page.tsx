@@ -41,7 +41,7 @@ export default function ExperienceTab() {
           <div className="flex items-center gap-3">
             <img src={e.icon} alt={e.address.institution} className="size-8" />
             <Header className="w-full">
-              <HeaderTop>
+              <HeaderTop className="flex-col sm:flex-row">
                 <Title>{e.title}</Title>
                 <HeaderAction>{e.contract}</HeaderAction>
               </HeaderTop>
