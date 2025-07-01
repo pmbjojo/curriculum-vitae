@@ -7,6 +7,6 @@ export const socials: TSocial[] = [
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/joshua-jourdam-7617b3196",
+    link: "https://www.linkedin.com/in/joshua-jourdam/",
   },
 ];

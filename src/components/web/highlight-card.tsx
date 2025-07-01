@@ -15,13 +15,13 @@ export function HighlightCard({
 }) {
   return (
     <motion.div
-      className="rounded-lg border bg-card p-4 shadow-sm hover:shadow-md transition-shadow flex items-center gap-3"
+      className="bg-card flex items-center gap-3 rounded-lg border p-4 shadow-sm transition-shadow hover:shadow-md"
       transition={{ delay: 0.2 }}
     >
       <Icon className="size-6" />
       <div>
         <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm text-muted-foreground">{children}</p>
+        <div className="text-muted-foreground text-sm">{children}</div>
       </div>
     </motion.div>
   );

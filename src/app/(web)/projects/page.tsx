@@ -23,7 +23,7 @@ export default function ProjectsTab() {
       {resume.projects
         .toSorted((a, b) => b.year - a.year)
         .map((p, i) => (
-          <TimelineCard index={i} key={p.title}>
+          <TimelineCard index={i} key={p.title} className="flex flex-col gap-3">
             <Header>
               <HeaderTop>
                 <Title>{p.title}</Title>
@@ -37,11 +37,9 @@ export default function ProjectsTab() {
                 <Period>{p.year.toString()}</Period>
               </HeaderDescription>
             </Header>
-            <Content>
-              <div className="flex flex-col gap-2">
-                <p>{p.description}</p>
-                <BadgeList items={p.technologies} />
-              </div>
+            <Content className="flex flex-col gap-2">
+              <p>{p.description}</p>
+              <BadgeList items={p.technologies} />
             </Content>
           </TimelineCard>
         ))}

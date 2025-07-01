@@ -21,14 +21,14 @@ export function HeroDescription() {
       >
         {resume.title}
       </motion.h2>
-      <motion.p
+      <motion.div
         className="text-muted-foreground max-w-[600px] md:text-xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Markdown>{resume.summary}</Markdown>
-      </motion.p>
+      </motion.div>
     </div>
   );
 }
