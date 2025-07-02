@@ -1,11 +1,11 @@
-import { resume } from "@/data";
 import { differenceInYears } from "date-fns";
-import { Mail, Phone, Linkedin, Car, Globe } from "lucide-react";
+import { Car, Globe, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import { ComponentType, ReactNode } from "react";
-import Profile from "@/public/profile.jpg";
 import Link from "next/link";
+import type { ComponentType, ReactNode } from "react";
+import { resume } from "@/data";
 import { cn } from "@/lib/utils";
+import Profile from "@/public/profile.jpg";
 
 export function Meta({
   Icon,

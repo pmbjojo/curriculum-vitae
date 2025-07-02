@@ -1,4 +1,4 @@
-import { TSocial } from "@/schemas/social";
+import type { TSocial } from "@/schemas/social";
 
 export const socials: TSocial[] = [
   {

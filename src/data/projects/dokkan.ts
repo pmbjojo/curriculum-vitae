@@ -1,4 +1,4 @@
-import { TProject } from "@/schemas/project";
+import type { TProject } from "@/schemas/project";
 
 export const dokkan: TProject = {
   title: "Dokkan Explorer",

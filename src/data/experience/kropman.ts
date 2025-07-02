@@ -1,4 +1,4 @@
-import { TExperience } from "@/schemas/experience";
+import type { TExperience } from "@/schemas/experience";
 
 export const kropman: TExperience = {
   title: "Développeur Full Stack",

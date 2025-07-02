@@ -1,4 +1,4 @@
-import { TProject } from "@/schemas/project";
+import type { TProject } from "@/schemas/project";
 
 export const beAnArtist: TProject = {
   title: "Be an Artist",

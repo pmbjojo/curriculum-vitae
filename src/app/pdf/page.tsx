@@ -1,6 +1,6 @@
-import { CurriculumVitae } from "./_components/curriculum-vitae";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { resume } from "@/data";
+import { CurriculumVitae } from "./_components/curriculum-vitae";
 import { Tools } from "./_components/tools";
 
 export const metadata: Metadata = {

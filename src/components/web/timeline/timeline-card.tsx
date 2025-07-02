@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
-import { ComponentProps, ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
+import { cn } from "@/lib/utils";
 import { Anchor } from "../anchor";
 
 export function TimelineCard({

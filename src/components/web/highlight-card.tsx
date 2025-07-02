@@ -1,6 +1,10 @@
-import { ForwardRefExoticComponent, ReactNode, RefAttributes } from "react";
+import type { LucideProps } from "lucide-react";
 import { motion } from "motion/react";
-import { LucideProps } from "lucide-react";
+import type {
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+} from "react";
 
 export function HighlightCard({
   title,

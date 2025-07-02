@@ -1,1 +1,1 @@
-export { default, alt, contentType, size } from "@/components/social-image";
+export { alt, contentType, default, size } from "@/components/social-image";

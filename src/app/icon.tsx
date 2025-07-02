@@ -8,18 +8,16 @@ export const contentType = "image/png";
 
 export default function Icon() {
   return new ImageResponse(
-    (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={`https://joshua-jourdam.vercel.app/profile.jpg`}
-        alt="Profile"
-        style={{ objectFit: "cover", borderRadius: "25%" }}
-        width={size.width}
-        height={size.height}
-      />
-    ),
+    // biome-ignore lint/performance/noImgElement: Cannot use next/image in ImageResponse
+    <img
+      src={`https://joshua-jourdam.vercel.app/profile.jpg`}
+      alt="Profile"
+      style={{ objectFit: "cover", borderRadius: "25%" }}
+      width={size.width}
+      height={size.height}
+    />,
     {
       ...size,
-    }
+    },
   );
 }

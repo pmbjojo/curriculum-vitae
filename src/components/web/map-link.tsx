@@ -1,8 +1,8 @@
-import { SAddress } from "@/schemas/utils";
-import { z } from "zod/v4";
-import { LinkButton } from "./link-button";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import type { z } from "zod/v4";
 import { mapLink } from "@/lib/utils";
+import type { SAddress } from "@/schemas/utils";
+import { LinkButton } from "./link-button";
 
 export function MapLink({
   address,

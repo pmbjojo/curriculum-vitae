@@ -1,7 +1,8 @@
-import { mapLink } from "@/lib/utils";
-import { TAddress } from "@/schemas/utils";
+import Image from "next/image";
 import Link from "next/link";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import { mapLink } from "@/lib/utils";
+import type { TAddress } from "@/schemas/utils";
 
 export function Institution({ url, name }: { url: string; name: string }) {
   return (
@@ -25,5 +26,7 @@ export function Address({ address }: { address: TAddress }) {
 }
 
 export function InstitutionIcon({ src, alt }: { src: string; alt: string }) {
-  return <img src={src} alt={alt} className="size-3" />;
+  return (
+    <Image width={12} height={12} src={src} alt={alt} className="size-3" />
+  );
 }

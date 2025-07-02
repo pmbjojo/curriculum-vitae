@@ -1,16 +1,16 @@
 "use client";
 
-import { Hero } from "./_components/hero/hero";
-import { ReactNode, useRef } from "react";
-import { ModeToggle } from "@/components/web/mode-toggle";
-import SkillsSection from "@/app/(web)/_components/skills-section";
-import { ScrollToJourneyButton } from "./_components/scroll-to-journey-button";
-import { motion } from "motion/react";
 import { Briefcase, FolderGit2, GraduationCap } from "lucide-react";
+import { motion } from "motion/react";
+import { type ReactNode, useRef } from "react";
+import SkillsSection from "@/app/(web)/_components/skills-section";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { ModeToggle } from "@/components/web/mode-toggle";
 import ScrollToTopButton from "@/components/web/scroll-to-top";
 import { TabButton } from "@/components/web/tab-button";
-import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
+import { Hero } from "./_components/hero/hero";
+import { ScrollToJourneyButton } from "./_components/scroll-to-journey-button";
 
 export default function Home({ children }: { children: ReactNode }) {
   const scrollToRef = useRef<HTMLDivElement>(null);

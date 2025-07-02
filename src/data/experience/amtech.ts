@@ -1,4 +1,4 @@
-import { TExperience } from "@/schemas/experience";
+import type { TExperience } from "@/schemas/experience";
 
 export const amtech: TExperience = {
   title: "Développeur logiciel",

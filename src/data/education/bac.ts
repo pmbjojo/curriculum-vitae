@@ -1,4 +1,4 @@
-import { TEducation } from "@/schemas/education";
+import type { TEducation } from "@/schemas/education";
 
 export const bac: TEducation = {
   degree: "Baccalauréat Scientifique",

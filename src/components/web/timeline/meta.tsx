@@ -1,12 +1,12 @@
-import { TAddress } from "@/schemas/utils";
 import {
   Building,
-  MapPin,
-  GitFork,
   Calendar,
   ExternalLink,
   GitBranch,
+  GitFork,
+  MapPin,
 } from "lucide-react";
+import type { TAddress } from "@/schemas/utils";
 import { LinkButton } from "../link-button";
 import { MapLink } from "../map-link";
 

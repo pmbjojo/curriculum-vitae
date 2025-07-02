@@ -1,4 +1,4 @@
-import { TProject } from "@/schemas/project";
+import type { TProject } from "@/schemas/project";
 
 export const coinrankingApp: TProject = {
   title: "Coinranking App",

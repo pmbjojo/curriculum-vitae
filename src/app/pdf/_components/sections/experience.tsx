@@ -1,9 +1,9 @@
-import { displayInterval } from "@/lib/utils";
-import { resume } from "@/data";
-import { Section } from "../section";
-import { Institution, Description, Address, InstitutionIcon } from "../utils";
 import Markdown from "react-markdown";
-import { TExperience } from "@/schemas/experience";
+import { resume } from "@/data";
+import { displayInterval } from "@/lib/utils";
+import type { TExperience } from "@/schemas/experience";
+import { Section } from "../section";
+import { Address, Description, Institution, InstitutionIcon } from "../utils";
 
 export function Experience() {
   return (

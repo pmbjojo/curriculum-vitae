@@ -1,12 +1,12 @@
 import { z } from "zod/v4";
-import { SProject } from "./project";
-import { SExperience } from "./experience";
 import { SEducation } from "./education";
-import { SAddress } from "./utils";
-import { SSkill, SSoftSkill } from "./skill";
+import { SExperience } from "./experience";
 import { SLanguage } from "./language";
+import { SProject } from "./project";
 import { SReference } from "./reference";
+import { SSkill, SSoftSkill } from "./skill";
 import { SSocial } from "./social";
+import { SAddress } from "./utils";
 
 export const SResume = z.object({
   title: z.string(),
