@@ -1,4 +1,4 @@
-import { TSkill, TSoftSkill } from "@/schemas/skill";
+import type { TSkill, TSoftSkill } from "@/schemas/skill";
 
 export const skills: TSkill[] = [
   {

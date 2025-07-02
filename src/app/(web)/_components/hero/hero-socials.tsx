@@ -1,6 +1,6 @@
+import { motion } from "motion/react";
 import { SocialLink } from "@/components/web/social-link";
 import { resume } from "@/data";
-import { motion } from "motion/react";
 
 export function HeroSocials() {
   return (

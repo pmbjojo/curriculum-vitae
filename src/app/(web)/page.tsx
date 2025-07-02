@@ -1,5 +1,10 @@
-import { displayInterval } from "@/lib/utils";
-import { resume } from "@/data";
+import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import {
   Table,
   TableBody,
@@ -7,27 +12,23 @@ import {
   TableHead,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { BadgeList } from "@/components/web/badge-list";
 import {
-  Timeline,
-  TimelineCard,
-  Header,
   Address,
   Content,
-  Period,
   Department,
+  Header,
   HeaderAction,
   HeaderDescription,
   HeaderTop,
   Institution,
+  Period,
+  Timeline,
+  TimelineCard,
   Title,
 } from "@/components/web/timeline";
+import { resume } from "@/data";
+import { displayInterval } from "@/lib/utils";
 
 export default function ExperienceTab() {
   return (
@@ -39,7 +40,13 @@ export default function ExperienceTab() {
           className="flex flex-col gap-3"
         >
           <div className="flex items-center gap-3">
-            <img src={e.icon} alt={e.address.institution} className="size-8" />
+            <Image
+              width={32}
+              height={32}
+              src={e.icon}
+              alt={e.address.institution}
+              className="size-8"
+            />
             <Header className="w-full">
               <HeaderTop className="flex-col sm:flex-row">
                 <Title>{e.title}</Title>

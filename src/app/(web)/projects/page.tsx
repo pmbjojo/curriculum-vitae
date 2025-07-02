@@ -3,12 +3,12 @@
 import { BadgeList } from "@/components/web/badge-list";
 import {
   Content,
-  Period,
   Header,
   HeaderAction,
   HeaderDescription,
   HeaderTop,
   Institution,
+  Period,
   Repository,
   Timeline,
   TimelineCard,

@@ -1,7 +1,7 @@
-import { resume } from "@/data";
-import { Section } from "../section";
 import Link from "next/link";
 import { Fragment } from "react";
+import { resume } from "@/data";
+import { Section } from "../section";
 
 export function References({ className }: { className?: string }) {
   return (

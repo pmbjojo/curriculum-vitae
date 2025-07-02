@@ -5,7 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { SocialIcon, TSocial } from "@/schemas/social";
+import { SocialIcon, type TSocial } from "@/schemas/social";
 
 export function SocialLink({ name, link }: TSocial) {
   const Icon = SocialIcon[name];

@@ -1,12 +1,12 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "motion/react";
+import { useRef } from "react";
+import { HeroActions } from "./hero-actions";
+import { HeroDescription } from "./hero-description";
 import { HeroHighlights } from "./hero-highlights";
 import { HeroImage } from "./hero-image";
 import { HeroSocials } from "./hero-socials";
-import { HeroActions } from "./hero-actions";
-import { HeroDescription } from "./hero-description";
 
 export function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);

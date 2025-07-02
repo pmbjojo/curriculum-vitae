@@ -1,8 +1,8 @@
+import { Briefcase, GraduationCap, MapPin } from "lucide-react";
+import { motion } from "motion/react";
+import Markdown from "react-markdown";
 import { HighlightCard } from "@/components/web/highlight-card";
 import { resume } from "@/data";
-import { motion } from "motion/react";
-import { Briefcase, GraduationCap, MapPin } from "lucide-react";
-import Markdown from "react-markdown";
 
 export function HeroHighlights() {
   return (

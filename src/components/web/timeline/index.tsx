@@ -1,7 +1,7 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
-import { ComponentProps } from "react";
 
 export function Timeline({
   children,
@@ -30,12 +30,12 @@ export {
   WebSite,
 } from "./meta";
 export {
-  TimelineCard,
   Content,
-  TimelineDot,
   Header,
   HeaderAction,
   HeaderDescription,
   HeaderTop,
+  TimelineCard,
+  TimelineDot,
   Title,
 } from "./timeline-card";

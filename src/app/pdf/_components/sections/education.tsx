@@ -1,8 +1,8 @@
 import { resume } from "@/data";
-import { Section } from "../section";
 import { displayInterval } from "@/lib/utils";
-import { Institution, Description, Address, InstitutionIcon } from "../utils";
-import { TEducation } from "@/schemas/education";
+import type { TEducation } from "@/schemas/education";
+import { Section } from "../section";
+import { Address, Description, Institution, InstitutionIcon } from "../utils";
 
 export function Education() {
   return (

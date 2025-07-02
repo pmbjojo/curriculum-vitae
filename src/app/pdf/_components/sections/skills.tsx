@@ -1,6 +1,6 @@
 import { resume } from "@/data";
+import type { TSkill } from "@/schemas/skill";
 import { Section } from "../section";
-import { TSkill } from "@/schemas/skill";
 
 const skills: TSkill[] = [
   ...resume.skills,

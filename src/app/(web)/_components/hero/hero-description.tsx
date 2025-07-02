@@ -1,6 +1,6 @@
-import { resume } from "@/data";
 import { motion } from "motion/react";
 import Markdown from "react-markdown";
+import { resume } from "@/data";
 
 export function HeroDescription() {
   return (

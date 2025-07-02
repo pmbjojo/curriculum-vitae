@@ -1,12 +1,12 @@
-import { SResume, TResume } from "@/schemas";
-import { projects } from "./projects";
-import { experience } from "./experience";
-import { education } from "./education";
-import { languages } from "./languages";
-import { socials } from "./socials";
-import { skills, softSkills } from "./skills";
-import { references } from "./references";
 import { intervalToDuration } from "date-fns";
+import { SResume, type TResume } from "@/schemas";
+import { education } from "./education";
+import { experience } from "./experience";
+import { languages } from "./languages";
+import { projects } from "./projects";
+import { references } from "./references";
+import { skills, softSkills } from "./skills";
+import { socials } from "./socials";
 
 const yearsOfExperience = intervalToDuration({
   start: experience[0].dates.start,

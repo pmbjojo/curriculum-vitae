@@ -1,5 +1,4 @@
-import { displayInterval } from "@/lib/utils";
-import { resume } from "@/data";
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
@@ -9,15 +8,17 @@ import {
 import {
   Address,
   Content,
-  Period,
   Header,
   HeaderDescription,
   HeaderTop,
   Institution,
+  Period,
   Timeline,
   TimelineCard,
   Title,
 } from "@/components/web/timeline";
+import { resume } from "@/data";
+import { displayInterval } from "@/lib/utils";
 
 export default function EducationTab() {
   return (
@@ -25,7 +26,13 @@ export default function EducationTab() {
       {resume.education.map((e, i) => (
         <TimelineCard key={e.degree} index={i} className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
-            <img src={e.icon} alt={e.address.institution} className="size-8" />
+            <Image
+              width={32}
+              height={32}
+              src={e.icon}
+              alt={e.address.institution}
+              className="size-8"
+            />
             <Header className="w-full">
               <HeaderTop>
                 <Title>{e.degree}</Title>

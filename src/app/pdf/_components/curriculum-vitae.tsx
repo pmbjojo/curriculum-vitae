@@ -1,13 +1,13 @@
 import { A4 } from "./a4";
-import { Header } from "./sections/header";
-import { Summary } from "./sections/summary";
-import { Experience } from "./sections/experience";
 import { Education } from "./sections/education";
-import { Skills } from "./sections/skills";
-import { Projects } from "./sections/projects";
-import { Languages } from "./sections/languages";
-import { References } from "./sections/references";
+import { Experience } from "./sections/experience";
+import { Header } from "./sections/header";
 import { Hobbies } from "./sections/hobbies";
+import { Languages } from "./sections/languages";
+import { Projects } from "./sections/projects";
+import { References } from "./sections/references";
+import { Skills } from "./sections/skills";
+import { Summary } from "./sections/summary";
 
 export function CurriculumVitae() {
   const accentColor = "black";

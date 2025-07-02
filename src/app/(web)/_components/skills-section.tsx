@@ -1,20 +1,19 @@
-import type React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import Link from "next/link";
-import { resume } from "@/data";
-import { Skill, SkillMeta, SoftSkillMeta } from "@/schemas/skill";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { resume } from "@/data";
+import { type Skill, SkillMeta, SoftSkillMeta } from "@/schemas/skill";
 
 export const skills: Skill[] = [
   "React",

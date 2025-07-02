@@ -1,24 +1,24 @@
-import { z } from "zod/v4";
 import {
   CircleHelp,
   Handshake,
   Lightbulb,
-  LucideProps,
+  type LucideProps,
   PersonStanding,
   Scale,
 } from "lucide-react";
-import reactIcon from "@/public/icons/react.svg";
-import nextjsIcon from "@/public/icons/nextjs.svg";
-import typescriptIcon from "@/public/icons/typescript.svg";
-import dotnetIcon from "@/public/icons/dotnet.svg";
-import tailwindcssIcon from "@/public/icons/tailwindcss.svg";
-import linuxIcon from "@/public/icons/linux.svg";
-import htmlIcon from "@/public/icons/html.svg";
-import csharpIcon from "@/public/icons/csharp.svg";
+import type { ForwardRefExoticComponent, RefAttributes } from "react";
+import { z } from "zod/v4";
 import blazorIcon from "@/public/icons/blazor.svg";
-import gitIcon from "@/public/icons/git.svg";
+import csharpIcon from "@/public/icons/csharp.svg";
 import cssIcon from "@/public/icons/css.svg";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
+import dotnetIcon from "@/public/icons/dotnet.svg";
+import gitIcon from "@/public/icons/git.svg";
+import htmlIcon from "@/public/icons/html.svg";
+import linuxIcon from "@/public/icons/linux.svg";
+import nextjsIcon from "@/public/icons/nextjs.svg";
+import reactIcon from "@/public/icons/react.svg";
+import tailwindcssIcon from "@/public/icons/tailwindcss.svg";
+import typescriptIcon from "@/public/icons/typescript.svg";
 
 export const SkillMeta = {
   React: { icon: reactIcon, url: "https://reactjs.org/" },

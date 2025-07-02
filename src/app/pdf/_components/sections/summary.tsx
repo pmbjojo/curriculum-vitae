@@ -1,5 +1,5 @@
-import { resume } from "@/data";
 import Markdown from "react-markdown";
+import { resume } from "@/data";
 
 export function Summary() {
   return (

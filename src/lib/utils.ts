@@ -1,10 +1,10 @@
-import { resume } from "@/data";
-import { SDates, TAddress } from "@/schemas/utils";
-import { clsx, type ClassValue } from "clsx";
+import { type ClassValue, clsx } from "clsx";
 import { format, formatDuration, intervalToDuration } from "date-fns";
 import { fr } from "date-fns/locale";
 import { twMerge } from "tailwind-merge";
-import { z } from "zod/v4";
+import type { z } from "zod/v4";
+import { resume } from "@/data";
+import type { SDates, TAddress } from "@/schemas/utils";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

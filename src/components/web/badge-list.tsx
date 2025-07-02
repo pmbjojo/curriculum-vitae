@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { Badge, badgeVariants } from "../ui/badge";
-import { VariantProps } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+import { useMemo, useState } from "react";
+import { Badge, type badgeVariants } from "../ui/badge";
 
 export function BadgeList({
   items,

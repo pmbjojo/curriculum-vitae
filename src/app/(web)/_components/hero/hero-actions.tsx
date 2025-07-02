@@ -1,9 +1,9 @@
-import { resume } from "@/data";
+import { Download, FileText, Mail } from "lucide-react";
+import { motion } from "motion/react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { IconSpan } from "@/components/web/icon-span";
-import { Download, FileText, Mail } from "lucide-react";
-import Link from "next/link";
-import { motion } from "motion/react";
+import { resume } from "@/data";
 import { fileName } from "@/lib/utils";
 
 export function HeroActions() {

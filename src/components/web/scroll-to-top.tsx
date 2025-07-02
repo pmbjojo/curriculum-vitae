@@ -1,26 +1,26 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { ArrowUpIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import { useCallback, useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
-  const checkScroll = () => {
+  const checkScroll = useCallback(() => {
     if (window.scrollY > 300) {
       setShowButton(true);
     } else {
       setShowButton(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", checkScroll);
     return () => {
       window.removeEventListener("scroll", checkScroll);
     };
-  }, []);
+  }, [checkScroll]);
 
   const scrollToTop = () => {
     window.scrollTo({

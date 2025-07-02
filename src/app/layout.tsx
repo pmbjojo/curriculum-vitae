@@ -1,12 +1,12 @@
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { ThemeProvider } from "@/components/web/theme-provider";
 import { resume } from "@/data";
-import { Analytics } from "@vercel/analytics/react";
-import { geistMono, geistSans, roboto } from "@/styles/fonts";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { env } from "@/lib/env";
-import Script from "next/script";
+import { geistMono, geistSans, roboto } from "@/styles/fonts";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -45,6 +45,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Next.js requires this for JSON-LD
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Script
