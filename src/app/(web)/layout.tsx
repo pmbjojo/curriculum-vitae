@@ -2,7 +2,7 @@
 
 import { Briefcase, FolderGit2, GraduationCap } from "lucide-react";
 import { motion } from "motion/react";
-import { type ReactNode, useRef } from "react";
+import { type ReactNode, Suspense, useRef } from "react";
 import SkillsSection from "@/app/(web)/_components/skills-section";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { ModeToggle } from "@/components/web/mode-toggle";
@@ -17,15 +17,17 @@ export default function Home({ children }: { children: ReactNode }) {
   return (
     <>
       <div className="relative flex min-h-dvh flex-col">
-        <AnimatedGridPattern
-          numSquares={30}
-          maxOpacity={0.1}
-          duration={3}
-          className={cn(
-            "-z-10 skew-y-12 opacity-50",
-            "[mask-image:radial-gradient(ellipse_closest-side_at_center,white,transparent)]",
-          )}
-        />
+        <Suspense>
+          <AnimatedGridPattern
+            numSquares={30}
+            maxOpacity={0.1}
+            duration={3}
+            className={cn(
+              "-z-10 skew-y-12 opacity-50",
+              "[mask-image:radial-gradient(ellipse_closest-side_at_center,white,transparent)]",
+            )}
+          />
+        </Suspense>
         <header className="flex justify-end p-4">
           <ModeToggle />
         </header>
