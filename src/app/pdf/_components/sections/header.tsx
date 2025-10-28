@@ -1,5 +1,6 @@
 import { differenceInYears } from "date-fns";
 import { Car, Globe, Linkedin, Mail, Phone } from "lucide-react";
+import { cacheLife } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 import type { ComponentType, ReactNode } from "react";
@@ -44,7 +45,7 @@ export function Header({ color }: { color?: string }) {
   );
 }
 
-function PersonalDetails() {
+async function PersonalDetails() {
   return (
     <div className="flex flex-col">
       <span className="text-[1.5rem] font-bold ligne leading-tight">
