@@ -8,7 +8,7 @@ export function Projects({ className }: { className?: string }) {
       <ul>
         {resume.projects
           .filter((p) => p.pdf)
-          .toSorted((a, b) => b.year - a.year)
+          .toSorted((a, b) => b.date.getTime() - a.date.getTime())
           .map((p) => (
             <li key={p.name}>
               <h3 className="font-bold">{p.name}</h3>
