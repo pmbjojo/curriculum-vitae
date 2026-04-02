@@ -8,8 +8,9 @@ import { references } from "./references";
 import { skills, softSkills } from "./skills";
 import { socials } from "./socials";
 
+const startDate = experience.toSorted((a, b) => a.dates.start.getTime() - b.dates.start.getTime())[0].dates.start;
 const yearsOfExperience = intervalToDuration({
-  start: experience[0].dates.start,
+  start: startDate,
   end: new Date(),
 }).years;
 
