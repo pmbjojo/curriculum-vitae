@@ -1,9 +1,9 @@
 import { differenceInYears } from "date-fns";
-import { Car, Globe, Linkedin, Mail, Phone } from "lucide-react";
-import { cacheLife } from "next/cache";
+import { Car, Globe, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ComponentType, ReactNode } from "react";
+import { FiLinkedin } from "react-icons/fi";
 import { resume } from "@/data";
 import { cn } from "@/lib/utils";
 import Profile from "@/public/profile.jpg";
@@ -70,7 +70,7 @@ function Informations() {
         <Link href={`tel:${resume.phone}`}>{resume.phone}</Link>
       </Meta>
       {linkedin && (
-        <Meta Icon={Linkedin}>
+        <Meta Icon={FiLinkedin}>
           <Link href={linkedin.link}>{linkedin.name}</Link>
         </Meta>
       )}
