@@ -14,7 +14,7 @@ export const STask = z.object({
 export const SExperience = z.object({
   title: z.string(),
   department: z.string(),
-  contract: z.literal(["Stage", "CDI", "Apprentissage", "Stage international"]),
+  contract: z.literal(["Stage", "CDI", "Apprentissage", "Stage international", "Prestation"]),
   address: SAddress,
   dates: SDates,
   description: z.string(),
