@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { SAddress, SDates } from "./utils";
 
 export const STask = z.object({
@@ -14,7 +14,7 @@ export const STask = z.object({
 export const SExperience = z.object({
   title: z.string(),
   department: z.string(),
-  contract: z.string(),
+  contract: z.literal(["Stage", "CDI", "Apprentissage", "Stage international"]),
   address: SAddress,
   dates: SDates,
   description: z.string(),

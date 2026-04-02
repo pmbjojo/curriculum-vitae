@@ -8,7 +8,7 @@ export const dokkan: TProject = {
     "Un site web permettant de consulter et explorer la base de données des cartes du jeu mobile Dragon Ball Z: Dokkan Battle. Il propose une interface interactive avec filtres et recherches avancées.",
   technologies: ["Next.js", "Drizzle", "Shadcn", "TailwindCSS"],
   type: "Personnel",
-  year: 2025,
+  date: new Date("2025-01-01"),
   repository: "https://github.com/pmbjojo/dokkan",
   // website: "https://dokkan-explorer.vercel.app",
   pdf: false,

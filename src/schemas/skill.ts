@@ -7,7 +7,7 @@ import {
   Scale,
 } from "lucide-react";
 import type { ForwardRefExoticComponent, RefAttributes } from "react";
-import { z } from "zod/v4";
+import { z } from "zod";
 import blazorIcon from "@/public/icons/blazor.svg";
 import csharpIcon from "@/public/icons/csharp.svg";
 import cssIcon from "@/public/icons/css.svg";

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { z } from "zod/v4";
+import type { z } from "zod";
 import { mapLink } from "@/lib/utils";
 import type { SAddress } from "@/schemas/utils";
 import { LinkButton } from "./link-button";

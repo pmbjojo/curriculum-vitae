@@ -9,6 +9,6 @@ export const flashmobiles: TProject = {
     "Un projet universitaire consistant à développer un jeu où des voitures télécommandées sont contrôlées via une interface web en temps réel. Le jeu met en scène trois véhicules, un 'Tank' et deux 'Flashmobiles'. Les 'Flashmobiles' doivent percuter le tank pour marquer des points.",
   technologies: ["Python", "Tornado", "Raspberry Pi", "JavaScript"],
   type: "Académique",
-  year: 2021,
+  date: new Date("2021-01-01"),
   pdf: false,
 };

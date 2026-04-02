@@ -6,6 +6,7 @@ import { dokkan } from "./dokkan";
 import { drawingCompetitionManagement } from "./drawing-competition-management";
 import { flashmobiles } from "./flashmobiles";
 import { jetpackCompose } from "./jetpack-compose";
+import { joesphine } from "./josephine";
 import { minesweeper } from "./minesweeper";
 import { obelisk } from "./obelisk";
 import { oracleLab } from "./oracle-lab";
@@ -25,4 +26,7 @@ export const projects: TProject[] = [
   beAnArtist,
   dokkan,
   jetpackCompose,
-];
+  joesphine,
+].sort((a, b) => {
+  return b.date.getTime() - a.date.getTime();
+});

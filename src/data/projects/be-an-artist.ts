@@ -8,7 +8,7 @@ export const beAnArtist: TProject = {
     "Une application Java permettant de dessiner avec divers outils (pinceaux, formes, couleurs). Développée dans le cadre d'un projet scolaire pour apprendre à utiliser Java Swing et la programmation orientée objet.",
   technologies: ["Java", "Swing", "JUnit"],
   type: "Académique",
-  year: 2022,
+  date: new Date("2022-01-01"),
   repository: "https://github.com/pmbjojo/be-an-artist",
   pdf: true,
 };

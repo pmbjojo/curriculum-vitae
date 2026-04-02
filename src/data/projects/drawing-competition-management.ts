@@ -8,7 +8,7 @@ export const drawingCompetitionManagement: TProject = {
   description: `Ce projet académique consiste en une application web permettant l'organisation et la gestion de concours de dessin. Il intègre des fonctionnalités telles que la création de concours, la soumission de dessins par les participants, et l'évaluation par un jury. L'infrastructure est déployée sur Microsoft Azure en utilisant Terraform pour le provisionnement et Ansible pour la configuration. Le backend est développé en PHP, avec une base de données SQL.`,
   technologies: ["PHP", "Ansible", "SQL", "Azure", "Terraform"],
   type: "Académique",
-  year: 2022,
+  date: new Date("2022-01-01"),
   repository: "https://github.com/pmbjojo/drawing-competition-management",
   pdf: false,
 };

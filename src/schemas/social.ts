@@ -1,5 +1,5 @@
 import { Github, Linkedin } from "lucide-react";
-import z from "zod/v4";
+import z from "zod";
 
 export const SocialIcon = {
   GitHub: Github,

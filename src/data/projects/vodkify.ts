@@ -9,7 +9,7 @@ export const vodkify: TProject = {
     "Un client web alternatif pour Spotify. Il inclut des fonctionnalités de recherche et de gestion de playlists.",
   technologies: ["Next.js", "tRPC", "Clerk", "TailwindCSS", "API Spotify"],
   type: "Personnel",
-  year: 2024,
+  date: new Date("2024-01-01"),
   repository: "https://github.com/pmbjojo/vodkify",
   website: "https://vodkify.vercel.app",
   pdf: false,
