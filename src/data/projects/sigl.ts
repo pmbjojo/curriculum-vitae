@@ -19,7 +19,7 @@ export const sigl: TProject = {
     "Terrafrom",
   ],
   type: "Académique",
-  year: 2024,
+  date: new Date("2024-01-01"),
   repository: "https://gitlab.com/pmbjojo/sigl",
   pdf: true,
 };

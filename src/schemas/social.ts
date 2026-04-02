@@ -1,9 +1,9 @@
-import { Github, Linkedin } from "lucide-react";
-import z from "zod/v4";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import z from "zod";
 
 export const SocialIcon = {
-  GitHub: Github,
-  LinkedIn: Linkedin,
+  GitHub: FiGithub,
+  LinkedIn: FiLinkedin,
 };
 
 export const SSocial = z.object({

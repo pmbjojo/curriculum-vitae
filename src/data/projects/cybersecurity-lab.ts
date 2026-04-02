@@ -18,7 +18,7 @@ export const cybersecurityLab: TProject = {
     "Docker",
   ],
   type: "Académique",
-  year: 2022,
+  date: new Date("2022-01-01"),
   repository: "https://github.com/pmbjojo/cybersecurity-lab",
   pdf: false,
 };

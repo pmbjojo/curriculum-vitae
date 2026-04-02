@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 
 export const SProjectType = z.enum([
   "Personnel",
@@ -15,8 +15,9 @@ export const SProject = z.object({
   technologies: z.array(z.string()),
   repository: z.url().optional(),
   website: z.url().optional(),
-  year: z.number(),
+  date: z.date(),
   type: SProjectType,
   pdf: z.boolean(),
+  content: z.any().optional(),
 });
 export type TProject = z.infer<typeof SProject>;

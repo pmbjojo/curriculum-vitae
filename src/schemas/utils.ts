@@ -1,8 +1,8 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 
 export const SDates = z.object({
   start: z.date(),
-  end: z.date(),
+  end: z.date().optional(),
 });
 export type TDates = z.infer<typeof SDates>;
 

@@ -8,7 +8,7 @@ export const oracleLab: TProject = {
   description: `Ce projet académique explore des techniques avancées en bases de données Oracle, notamment la création de vues, de fonctions et de triggers. L'environnement est déployé localement à l'aide de Podman avec l'image Oracle XE 11g. Le dépôt contient des scripts SQL pour la création de schémas, des exemples de fonctions et de triggers, ainsi qu'un rapport détaillé. Ce laboratoire a été réalisé dans le cadre d'un cours universitaire sur les bases de données avancées.`,
   technologies: ["Oracle SQL", "PL/SQL", "Podman", "Docker", "Linux"],
   type: "Académique",
-  year: 2023,
+  date: new Date("2023-01-01"),
   repository: "https://github.com/pmbjojo/oracle-lab",
   pdf: false,
 };

@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 import { SEducation } from "./education";
 import { SExperience } from "./experience";
 import { SLanguage } from "./language";
