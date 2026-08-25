@@ -67,7 +67,7 @@ export default function ExperienceTab() {
             {e.methodologies.length > 0 && (
               <div>Méthodologies : {e.methodologies.join(", ")}</div>
             )}
-            <Accordion type="multiple">
+            <Accordion multiple>
               {e.tasks.map((t) => (
                 <AccordionItem value={t.title} key={t.title}>
                   <AccordionTrigger className="font-bold">

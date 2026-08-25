@@ -2,12 +2,23 @@ import type { TProject } from "@/schemas/project";
 
 export const joesphine: TProject = {
   title: "Joséphine",
-  name: "Serveur domestique",
-  summary: "Hébergement de services multimédias et cloud personnel",
+  name: "Joséphine",
+  summary:
+    "Site vitrine pour un restaurant bistronomique avec réservation en ligne en temps réel",
   description:
-    "Un homelab personnel permettant d'héberger divers services comme un cloud privé, une bibliothèque multimédia et un serveur de streaming. Il sert aussi de terrain d'expérimentation pour des machines virtuelles et des conteneurs Docker.",
-  technologies: ["Docker", "Ubuntu", "Streaming"],
-  type: "Personnel",
-  date: new Date("2025-10-01"),
+    "Site vitrine et système de réservation en ligne pour le restaurant bistronomique Joséphine à Cherbourg. Les clients réservent directement un créneau disponible, pendant que le personnel dispose d'un espace d'administration pour suivre les réservations et consulter des statistiques.",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Supabase",
+    "Drizzle",
+    "shadcn/ui",
+    "Vercel",
+    "Realtime",
+  ],
+  type: "Professionnel",
+  date: new Date("2025-06-01"),
+  repository: "https://github.com/leolsvg/josephine",
+  website: "https://josephine-cherbourg.fr/",
   pdf: true,
 };

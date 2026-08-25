@@ -58,7 +58,7 @@ export default function EducationTab() {
                 ))}
               </div>
             )}
-            <Accordion type="multiple">
+            <Accordion multiple>
               {e.program && (
                 <AccordionItem value="program">
                   <AccordionTrigger>Programme</AccordionTrigger>
