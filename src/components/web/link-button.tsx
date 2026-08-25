@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "../ui/button";
 
 export function LinkButton({
   href,
@@ -10,10 +11,18 @@ export function LinkButton({
   children: ReactNode;
 }) {
   return (
-    <Button asChild variant="link" className="text-inherit p-0 h-auto">
-      <Link href={href} target="_blank" rel="noopener noreferrer">
-        {children}
-      </Link>
-    </Button>
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(
+        buttonVariants({
+          variant: "link",
+          className: "text-inherit p-0 h-auto",
+        }),
+      )}
+    >
+      {children}
+    </Link>
   );
 }
