@@ -12,5 +12,5 @@ export const jetpackCompose: TProject = {
   date: new Date("2025-01-01"),
   // repository: "",
   website: "https://hyperskill.org/courses/66",
-  pdf: true,
+  pdf: false,
 };
